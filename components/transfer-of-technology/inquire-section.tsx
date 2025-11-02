@@ -67,86 +67,86 @@ export default function InquireSection() {
 
         {/* Right column - Form card */}
         <div className="w-full lg:flex-1">
-          <div className="w-full max-w-[580px] opacity-100 border border-[#555555] rounded-[12px] p-8 shadow-lg">
-            <form className="space-y-6">
+          <div className="w-full max-w-[580px] opacity-100 border border-[#555555] rounded-[12px] p-4 md:p-6 lg:p-8 shadow-lg mx-auto lg:mx-0">
+            <form className="space-y-4 md:space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                  <label className="font-urbanist font-semibold text-[15px] md:text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
                     First Name
                   </label>
                   <input
                     type="text"
                     placeholder="Enter First Name"
-                    className="w-full max-w-[325px] font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                    className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
                   />
                 </div>
                 <div>
-                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                  <label className="font-urbanist font-semibold text-[15px] md:text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
                     Last Name
                   </label>
                   <input
                     type="text"
                     placeholder="Enter Last Name"
-                    className="w-full max-w-[325px] font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                    className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                  <label className="font-urbanist font-semibold text-[15px] md:text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
                     Email
                   </label>
                   <input
                     type="email"
                     placeholder="Enter your Email"
-                    className="w-full max-w-[325px]  font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                    className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
                   />
                 </div>
                 <div>
-                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                  <label className="font-urbanist font-semibold text-[15px] md:text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
                     Phone
                   </label>
                   <input
                     type="tel"
                     placeholder="Enter Phone Number"
-                    className="w-full max-w-[325px]  font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                    className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                <label className="font-urbanist font-semibold text-[15px] md:text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
                   Message
                 </label>
                 <textarea
                   placeholder="Enter your Message here.."
-                  rows={6}
-                  className="w-full max-w-[680px] font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none resize-vertical focus:ring-2 focus:ring-orange-500/30"
+                  rows={5}
+                  className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none resize-vertical focus:ring-2 focus:ring-orange-500/30 md:rows-6"
                 />
               </div>
 
-              <div className="flex items-center gap-3">
+              <div className="flex items-start md:items-center gap-3">
                 <input
                   id="agree"
                   type="checkbox"
-                  className="w-5 h-5 rounded-sm bg-white/5 border-white/10 text-orange-500 accent-orange-500"
+                  className="w-5 h-5 mt-1 md:mt-0 flex-shrink-0 rounded-sm bg-white/5 border-white/10 text-orange-500 accent-orange-500"
                 />
                 <label
                   htmlFor="agree"
-                  className="font-albert-sans font-medium text-[18px] leading-[150%] tracking-[0%] text-white"
+                  className="font-albert-sans font-medium text-[14px] md:text-[16px] lg:text-[18px] leading-[150%] tracking-[0%] text-white"
                 >
                   I agree with{" "}
                   <a
                     href="#"
-                    className="font-albert-sans font-medium text-[18px] leading-[150%] tracking-[0%] underline decoration-solid decoration-auto text-white"
+                    className="font-albert-sans font-medium text-[14px] md:text-[16px] lg:text-[18px] leading-[150%] tracking-[0%] underline decoration-solid decoration-auto text-white"
                   >
                     Terms of Use
                   </a>{" "}
                   and{" "}
                   <a
                     href="#"
-                    className="font-albert-sans font-medium text-[18px] leading-[150%] tracking-[0%] underline decoration-solid decoration-auto text-white"
+                    className="font-albert-sans font-medium text-[14px] md:text-[16px] lg:text-[18px] leading-[150%] tracking-[0%] underline decoration-solid decoration-auto text-white"
                   >
                     Privacy Policy
                   </a>
@@ -156,7 +156,7 @@ export default function InquireSection() {
               <div className="flex justify-center">
                 <button
                   type="submit"
-                  className="inline-flex cursor-pointer items-center gap-3 bg-[#EA580C] hover:bg-[#EA580C]/90 font-albert-sans font-medium text-[18px]  leading-6 tracking-[0%] text-white rounded-full px-8 py-3 shadow-sm transition"
+                  className="w-full md:w-auto inline-flex cursor-pointer items-center justify-center gap-3 bg-[#EA580C] hover:bg-[#EA580C]/90 font-albert-sans font-medium text-[16px] md:text-[18px] leading-6 tracking-[0%] text-white rounded-full px-6 md:px-8 py-3 shadow-sm transition"
                 >
                   Send Your Message
                 </button>
