@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function InquireSection() {
   return (
-    <section className="w-full bg-black text-white py-20 px-6 relative">
+    <section className="w-full bg-black text-white py-12 md:py-16 lg:py-20 px-4 md:px-6 relative overflow-hidden">
       {/* Decorative artwork - ellipse background with drone overlay */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] pointer-events-none">
         {/* Green ellipse background */}
@@ -42,23 +42,23 @@ export default function InquireSection() {
         />
       </div>
 
-      <div className="max-w-[1100px] mx-auto flex gap-10 items-start relative z-10">
+      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 items-start relative z-10">
         {/* Left column - Intro + decorative artwork */}
-        <div className="lg:col-span-4 flex flex-col gap-6 sm:ml-5">
+        <div className="w-full lg:w-auto flex flex-col gap-4 md:gap-6 sm:ml-0 lg:ml-5">
           <div className="flex flex-col gap-1">
             <Image
               src="/transfer-of-tech/Icon.png"
               alt="icon"
               width={50}
               height={50}
-              className="object-contain"
+              className="object-contain w-10 h-10 md:w-12 md:h-12"
             />
-            <h2 className="font-albert-sans font-semibold text-[40px] leading-[150%] tracking-[0%] text-white">
+            <h2 className="font-albert-sans font-semibold text-[28px] md:text-[36px] lg:text-[40px] leading-[150%] tracking-[0%] text-white">
               Inquire Now
             </h2>
           </div>
 
-          <p className="font-albert-sans font-normal text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
+          <p className="font-albert-sans font-normal text-[16px] md:text-[17px] lg:text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
             Have questions about our technology transfer services? Get in touch
             with our team to learn how we can help transform your innovations
             into market-ready solutions.
@@ -66,7 +66,7 @@ export default function InquireSection() {
         </div>
 
         {/* Right column - Form card */}
-        <div className="lg:col-span-8">
+        <div className="w-full lg:flex-1">
           <div className="w-full max-w-[580px] opacity-100 border border-[#555555] rounded-[12px] p-8 shadow-lg">
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
