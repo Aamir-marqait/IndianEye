@@ -2,28 +2,39 @@ import Image from "next/image";
 
 export default function InquireSection() {
   return (
-    <section className="w-full bg-black text-white py-20 px-6">
-      <div className="max-w-[1100px] mx-auto flex gap-10 items-start">
+    <section className="w-full bg-black text-white py-20 px-6 relative">
+      {/* Decorative artwork - ellipse background with drone overlay */}
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] pointer-events-none">
+        {/* Green ellipse background */}
+        <Image
+          src="/transfer-of-tech/left.png"
+          alt="green-ellipse-background"
+          width={700}
+          height={100}
+          className="absolute -mt-44 top-0 left-0 object-contain brightness-200 opacity-100"
+        />
+        {/* Drone image overlay */}
+        <Image
+          src="/transfer-of-tech/1.png"
+          alt="drone"
+          width={200}
+          height={400}
+          className="absolute top-0 left-0 object-contain opacity-100"
+        />
+      </div>
+
+      <div className="max-w-[1100px] mx-auto flex gap-10 items-start relative z-10">
         {/* Left column - Intro + decorative artwork */}
         <div className="lg:col-span-4 flex flex-col gap-6">
-          {/* small decorative sparkles (can be replaced with an SVG) */}
-          <div className=" relative ">
-            <Image
-              src="/transfer-of-tech/decorative-art.png"
-              alt="decorative-art"
-              fill
-              className="opacity-20 select-none pointer-events-none object-contain"
-            />
-          </div>
           <h2 className="font-albert-sans font-semibold text-[40px] leading-[150%] tracking-[0%] text-white">
             Inquire Now
           </h2>
 
           <p className="font-albert-sans font-normal text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
-            Have questions about our technology transfer services? Get in touch with our team to learn how we can help transform your innovations into market-ready solutions.
+            Have questions about our technology transfer services? Get in touch
+            with our team to learn how we can help transform your innovations
+            into market-ready solutions.
           </p>
-
-          {/* Decorative artwork (drone/line art) - replace src with your asset */}
         </div>
 
         {/* Right column - Form card */}
