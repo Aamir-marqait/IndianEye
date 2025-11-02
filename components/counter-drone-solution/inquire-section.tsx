@@ -42,7 +42,7 @@ export default function InquireSection() {
         />
       </div>
 
-      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 items-start relative z-10">
+      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-1 items-start relative z-10">
         {/* Left column - Intro + decorative artwork */}
         <div className="w-full lg:w-auto flex flex-col gap-4 md:gap-6 sm:ml-0 lg:ml-5">
           <div className="flex flex-col gap-1">
@@ -53,8 +53,8 @@ export default function InquireSection() {
               height={50}
               className="object-contain w-10 h-10 md:w-12 md:h-12"
             />
-            <h2 className="font-albert-sans font-semibold text-[28px] md:text-[36px] lg:text-[40px] leading-[150%] tracking-[0%] text-white">
-              Inquire Now
+            <h2 className="font-albert-sans md:max-w-sm font-semibold text-[28px] md:text-[36px] lg:text-[40px] leading-[150%] tracking-[0%] text-white">
+              Inquire About Counter-Drone Solutions
             </h2>
           </div>
 
@@ -67,7 +67,7 @@ export default function InquireSection() {
 
         {/* Right column - Form card */}
         <div className="w-full lg:flex-1">
-          <div className="w-full max-w-[580px] opacity-100 border border-[#555555] rounded-[12px] p-4 md:p-6 lg:p-8 shadow-lg mx-auto lg:mx-0">
+          <div className="w-full max-w-[780px] opacity-100 border border-[#555555] rounded-[12px] p-4 md:p-6 lg:p-8 shadow-lg mx-auto lg:mx-0">
             <form className="space-y-4 md:space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
