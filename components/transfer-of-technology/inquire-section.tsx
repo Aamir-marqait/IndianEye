@@ -23,6 +23,17 @@ export default function InquireSection() {
         />
       </div>
 
+      {/* Right side ellipse decoration */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] pointer-events-none">
+        <Image
+          src="/transfer-of-tech/ellipse.png"
+          alt="ellipse-decoration"
+          width={700}
+          height={100}
+          className="absolute -mt-44 top-0 right-0 object-contain opacity-100"
+        />
+      </div>
+
       <div className="max-w-[1100px] mx-auto flex gap-10 items-start relative z-10">
         {/* Left column - Intro + decorative artwork */}
         <div className="lg:col-span-4 flex flex-col gap-6">
