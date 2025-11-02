@@ -1,0 +1,134 @@
+import Image from "next/image";
+
+export default function InquireSection() {
+  return (
+    <section className="w-full bg-black text-white py-20 px-6">
+      <div className="max-w-[1100px] mx-auto flex gap-10 items-start">
+        {/* Left column - Intro + decorative artwork */}
+        <div className="lg:col-span-4 flex flex-col gap-6">
+          {/* small decorative sparkles (can be replaced with an SVG) */}
+          <div className=" relative ">
+            <Image
+              src="/transfer-of-tech/decorative-art.png"
+              alt="decorative-art"
+              fill
+              className="opacity-20 select-none pointer-events-none object-contain"
+            />
+          </div>
+          <h2 className="font-albert-sans font-semibold text-[40px] leading-[150%] tracking-[0%] text-white">
+            Inquire Now
+          </h2>
+
+          <p className="font-albert-sans font-normal text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
+            Have questions about our technology transfer services? Get in touch with our team to learn how we can help transform your innovations into market-ready solutions.
+          </p>
+
+          {/* Decorative artwork (drone/line art) - replace src with your asset */}
+        </div>
+
+        {/* Right column - Form card */}
+        <div className="lg:col-span-8">
+          <div className="w-full max-w-[580px] opacity-100 border border-[#555555] rounded-[12px] p-8 shadow-lg">
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter First Name"
+                    className="w-full max-w-[325px] font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                  />
+                </div>
+                <div>
+                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter Last Name"
+                    className="w-full max-w-[325px] font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="Enter your Email"
+                    className="w-full max-w-[325px]  font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                  />
+                </div>
+                <div>
+                  <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="Enter Phone Number"
+                    className="w-full max-w-[325px]  font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="font-urbanist font-semibold text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                  Message
+                </label>
+                <textarea
+                  placeholder="Enter your Message here.."
+                  rows={6}
+                  className="w-full max-w-[680px] font-urbanist font-medium  leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-5 text-[16px] text-white placeholder:text-white/40 outline-none resize-vertical focus:ring-2 focus:ring-orange-500/30"
+                />
+              </div>
+
+              <div className="flex items-center gap-3">
+                <input
+                  id="agree"
+                  type="checkbox"
+                  className="w-5 h-5 rounded-sm bg-white/5 border-white/10 text-orange-500 accent-orange-500"
+                />
+                <label
+                  htmlFor="agree"
+                  className="font-albert-sans font-medium text-[18px] leading-[150%] tracking-[0%] text-white"
+                >
+                  I agree with{" "}
+                  <a
+                    href="#"
+                    className="font-albert-sans font-medium text-[18px] leading-[150%] tracking-[0%] underline decoration-solid decoration-auto text-white"
+                  >
+                    Terms of Use
+                  </a>{" "}
+                  and{" "}
+                  <a
+                    href="#"
+                    className="font-albert-sans font-medium text-[18px] leading-[150%] tracking-[0%] underline decoration-solid decoration-auto text-white"
+                  >
+                    Privacy Policy
+                  </a>
+                </label>
+              </div>
+
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="inline-flex cursor-pointer items-center gap-3 bg-[#EA580C] hover:bg-[#EA580C]/90 font-albert-sans font-medium text-[18px]  leading-6 tracking-[0%] text-white rounded-full px-8 py-3 shadow-sm transition"
+                >
+                  Send Your Message
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* thin rounded outline matching reference (outer border) */}
+          <div className="mt-4 pointer-events-none rounded-xl border border-white/6 w-full h-0" />
+        </div>
+      </div>
+    </section>
+  );
+}
