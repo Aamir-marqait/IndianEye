@@ -11,7 +11,7 @@ export default function InquireSection() {
           alt="green-ellipse-background"
           width={700}
           height={100}
-          className="absolute -mt-44 top-0 left-0 object-contain brightness-200 opacity-100"
+          className="absolute -mt-44 top-0 left-0 object-contain brightness-200 opacity-100 hidden sm:block"
         />
         {/* Drone image overlay */}
         <Image
@@ -19,7 +19,7 @@ export default function InquireSection() {
           alt="drone"
           width={200}
           height={400}
-          className="absolute top-0 left-0 object-contain opacity-100"
+          className="absolute top-0 left-0 object-contain opacity-100 hidden sm:block"
         />
       </div>
 
@@ -32,14 +32,31 @@ export default function InquireSection() {
           height={100}
           className="absolute -mt-44 top-0 right-0 object-contain opacity-100"
         />
+        {/* Vector image overlay */}
+        <Image
+          src="/transfer-of-tech/Vector.png"
+          alt="vector"
+          width={200}
+          height={400}
+          className="absolute -top-80 -right-25 object-contain opacity-60 hidden sm:block"
+        />
       </div>
 
       <div className="max-w-[1100px] mx-auto flex gap-10 items-start relative z-10">
         {/* Left column - Intro + decorative artwork */}
-        <div className="lg:col-span-4 flex flex-col gap-6">
-          <h2 className="font-albert-sans font-semibold text-[40px] leading-[150%] tracking-[0%] text-white">
-            Inquire Now
-          </h2>
+        <div className="lg:col-span-4 flex flex-col gap-6 sm:ml-5">
+          <div className="flex flex-col gap-1">
+            <Image
+              src="/transfer-of-tech/Icon.png"
+              alt="icon"
+              width={50}
+              height={50}
+              className="object-contain"
+            />
+            <h2 className="font-albert-sans font-semibold text-[40px] leading-[150%] tracking-[0%] text-white">
+              Inquire Now
+            </h2>
+          </div>
 
           <p className="font-albert-sans font-normal text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
             Have questions about our technology transfer services? Get in touch
