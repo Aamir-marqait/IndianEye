@@ -54,7 +54,7 @@ export default function Testimonials() {
   const currentTestimonial = testimonials[currentSlide];
 
   return (
-    <section className="w-screen min-h-[90vh] relative bg-[#0B0B0B]">
+    <section className="max-w-screen min-h-[90vh] relative bg-[#0B0B0B]">
       {/* Background color image - bottom layer */}
       <Image
         src="/about/bg-color.png"
@@ -78,6 +78,23 @@ export default function Testimonials() {
         size={132}
         className="hidden md:block pointer-events-none absolute top-16 right-58 opacity-100"
       />
+      <div className="absolute top-0 right-0 w-[250px] h-[500px] pointer-events-none overflow-hidden">
+        <Image
+          src="/transfer-of-tech/ellipse.png"
+          alt="ellipse-decoration"
+          width={400}
+          height={400}
+          className="absolute -top-16 -right-16 object-contain opacity-100"
+        />
+        {/* Vector image overlay */}
+        <Image
+          src="/transfer-of-tech/Vector.png"
+          alt="vector"
+          width={50}
+          height={350}
+          className="absolute top-8 right-0 object-contain opacity-100 z-20"
+        />
+      </div>
 
       <div className="mx-auto max-w-[1100px] px-6 md:px-8 py-14 md:py-16 lg:py-20">
         <div className="flex items-center gap-2 mb-4 md:mb-5">
