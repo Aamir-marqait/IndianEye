@@ -47,7 +47,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Bottom Right Image */}
-      <div className="absolute bottom-0 -right-10 w-32 h-32 md:w-120 md:h-120  pointer-events-none">
+      <div className="absolute bottom-0 right-0 w-32 h-32 md:w-120 md:h-120  pointer-events-none">
         <Image
           src="/home/right.png"
           alt="Decorative element"
