@@ -1,4 +1,6 @@
+import CTA from "@/components/home/cta";
 import HeroBanner from "@/components/home/hero-section";
+import MilestonesThatMatter from "@/components/home/milestone";
 import ServicesSection from "@/components/home/product-and-service";
 import TransferOfTechnologies from "@/components/home/transfer-technologies";
 import WhyChooseUs from "@/components/home/why-choose-us";
@@ -20,6 +22,8 @@ function page() {
       </div>
       <TransferOfTechnologies />
       <WhyChooseUs />
+      <MilestonesThatMatter />
+      <CTA />
     </div>
   );
 }
