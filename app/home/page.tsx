@@ -1,6 +1,7 @@
 import HeroBanner from "@/components/home/hero-section";
 import ServicesSection from "@/components/home/product-and-service";
 import TransferOfTechnologies from "@/components/home/transfer-technologies";
+import WhyChooseUs from "@/components/home/why-choose-us";
 import Image from "next/image";
 
 function page() {
@@ -18,6 +19,7 @@ function page() {
         />
       </div>
       <TransferOfTechnologies />
+      <WhyChooseUs />
     </div>
   );
 }
