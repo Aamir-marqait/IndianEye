@@ -1,9 +1,12 @@
-import React from 'react'
+import AboutHeroSection from "@/components/about-us/hero-section";
+import React from "react";
 
 function page() {
   return (
-    <div>page</div>
-  )
+    <div>
+      <AboutHeroSection />
+    </div>
+  );
 }
 
-export default page
+export default page;
