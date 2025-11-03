@@ -37,7 +37,13 @@ const Header = () => {
             className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
           >
             Home
-            <span className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${isActive('/home') ? 'w-1/2' : 'w-0 group-hover:w-1/2 group-focus:w-1/2'}`}></span>
+            <span
+              className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
+                isActive("/home")
+                  ? "w-1/2"
+                  : "w-0 group-hover:w-1/2 group-focus:w-1/2"
+              }`}
+            ></span>
           </Link>
           <div className="flex items-center gap-1.5 group">
             <Link
@@ -45,7 +51,13 @@ const Header = () => {
               className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
             >
               Product
-              <span className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${isActive('/product') ? 'w-1/2' : 'w-0 group-hover:w-1/2 group-focus:w-1/2'}`}></span>
+              <span
+                className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
+                  isActive("/product")
+                    ? "w-1/2"
+                    : "w-0 group-hover:w-1/2 group-focus:w-1/2"
+                }`}
+              ></span>
             </Link>
             <ChevronDown size={20} color="#fff" />
           </div>
@@ -55,7 +67,13 @@ const Header = () => {
               className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
             >
               Service
-              <span className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${isActive('/service') ? 'w-1/2' : 'w-0 group-hover:w-1/2 group-focus:w-1/2'}`}></span>
+              <span
+                className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
+                  isActive("/service")
+                    ? "w-1/2"
+                    : "w-0 group-hover:w-1/2 group-focus:w-1/2"
+                }`}
+              ></span>
             </Link>
             <ChevronDown size={20} color="#fff" />
           </div>
@@ -64,14 +82,26 @@ const Header = () => {
             className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
           >
             Training & skill development
-            <span className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${isActive('/training') ? 'w-1/2' : 'w-0 group-hover:w-1/2 group-focus:w-1/2'}`}></span>
+            <span
+              className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
+                isActive("/training")
+                  ? "w-1/2"
+                  : "w-0 group-hover:w-1/2 group-focus:w-1/2"
+              }`}
+            ></span>
           </Link>
           <Link
-            href="/about"
+            href="/about-us"
             className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
           >
             About Us
-            <span className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${isActive('/about') ? 'w-1/2' : 'w-0 group-hover:w-1/2 group-focus:w-1/2'}`}></span>
+            <span
+              className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
+                isActive("/about-us")
+                  ? "w-1/2"
+                  : "w-0 group-hover:w-1/2 group-focus:w-1/2"
+              }`}
+            ></span>
           </Link>
         </nav>
 
@@ -100,7 +130,9 @@ const Header = () => {
           <nav className="flex flex-col px-4 py-4">
             <Link
               href="/home"
-              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${isActive('/home') ? 'text-[#EA580C]' : 'text-white'}`}
+              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
+                isActive("/home") ? "text-[#EA580C]" : "text-white"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Home
@@ -109,7 +141,9 @@ const Header = () => {
               <div className="flex items-center justify-between">
                 <Link
                   href="/product"
-                  className={`font-(family-name:--font-albert-sans) text-[17px] font-normal transition-colors ${isActive('/product') ? 'text-[#EA580C]' : 'text-white'}`}
+                  className={`font-(family-name:--font-albert-sans) text-[17px] font-normal transition-colors ${
+                    isActive("/product") ? "text-[#EA580C]" : "text-white"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Product
@@ -121,7 +155,9 @@ const Header = () => {
               <div className="flex items-center justify-between">
                 <Link
                   href="/service"
-                  className={`font-(family-name:--font-albert-sans) text-[17px] font-normal transition-colors ${isActive('/service') ? 'text-[#EA580C]' : 'text-white'}`}
+                  className={`font-(family-name:--font-albert-sans) text-[17px] font-normal transition-colors ${
+                    isActive("/service") ? "text-[#EA580C]" : "text-white"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   Service
@@ -131,14 +167,18 @@ const Header = () => {
             </div>
             <Link
               href="/training"
-              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${isActive('/training') ? 'text-[#EA580C]' : 'text-white'}`}
+              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
+                isActive("/training") ? "text-[#EA580C]" : "text-white"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               Training & skill development
             </Link>
             <Link
               href="/about"
-              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${isActive('/about') ? 'text-[#EA580C]' : 'text-white'}`}
+              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
+                isActive("/about") ? "text-[#EA580C]" : "text-white"
+              }`}
               onClick={() => setIsMenuOpen(false)}
             >
               About Us

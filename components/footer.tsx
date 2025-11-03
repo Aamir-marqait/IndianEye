@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="max-w-[1100px] mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between gap-10 pb-8 border-b border-[#353535]">
           {/* Logo + Description + Social */}
-          <div className="flex-1 min-w-[220px]">
+          <div className="min-w-[220px] max-w-[320px]">
             <Image
               src="/landing/logo.png"
               alt="Indianeye Logo"
@@ -60,85 +60,89 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          {/* Services */}
-          <div className="flex-1 min-w-[180px]">
-            <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-[22px] leading-[30px] text-white mb-3">
-              Services
-            </h5>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Mistakes To Avoid
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Your Startup
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Knew About Fonts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Knew About Fonts
-                </Link>
-              </li>
-            </ul>
-          </div>
-          {/* Quick Links */}
-          <div className="flex-1 min-w-[180px]">
-            <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-[22px] leading-[30px] text-white mb-3">
-              Quick Links
-            </h5>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Mistakes To Avoid
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Your Startup
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Knew About Fonts
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
-                >
-                  Knew About Fonts
-                </Link>
-              </li>
-            </ul>
+
+          {/* Services + Quick Links Container */}
+          <div className="flex gap-10 md:gap-16">
+            {/* Services */}
+            <div className="min-w-[180px]">
+              <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-[22px] leading-[30px] text-white mb-3">
+                Services
+              </h5>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Mistakes To Avoid
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Your Startup
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Knew About Fonts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Knew About Fonts
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            {/* Quick Links */}
+            <div className="min-w-[180px]">
+              <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-[22px] leading-[30px] text-white mb-3">
+                Quick Links
+              </h5>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Mistakes To Avoid
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Your Startup
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Knew About Fonts
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="#"
+                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-base leading-[30px] text-white hover:text-white/80"
+                  >
+                    Knew About Fonts
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
           {/* Subscribe */}
         </div>

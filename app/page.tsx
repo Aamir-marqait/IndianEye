@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col md:flex-row w-full min-h-[calc(100vh-74px)] bg-cover -mt-1.5 bg-center bg-no-repeat justify-around items-center gap-8 px-8 bg-[url('/landing/bg.png')]">
+    <div className="flex flex-col md:flex-row w-full min-h-[calc(100vh-74px)] bg-cover -mt-1.5 bg-center bg-no-repeat md:justify-around items-center justify-center gap-8 px-8 bg-[url('/landing/bg.png')]">
       {/* Left Container */}
-      <div className="rounded-[40px] flex flex-col justify-center items-start p-8 gap-4 w-[532px] h-[287px] bg-black/40 backdrop-blur-[28px]">
+      <div className="rounded-[40px] flex flex-col justify-center items-start p-8 gap-4 w-full md:w-[532px] h-[287px] bg-black/40 backdrop-blur-[28px]">
         <h2 className="font-(family-name:--font-albert-sans) font-semibold text-[28px] leading-[100%] text-white">
           Reinforcing National Defence with Next-Gen Tech
         </h2>
@@ -19,7 +19,7 @@ export default function Home() {
       </div>
 
       {/* Right Container */}
-      <div className="rounded-[40px] flex flex-col justify-start items-start p-8 gap-4 w-[532px] h-[287px] bg-black/40 backdrop-blur-[28px] relative">
+      <div className="rounded-[40px]  flex flex-col justify-start items-start p-8 gap-4 w-full md:w-[532px] h-[287px] bg-black/40 backdrop-blur-[28px] relative">
         <h2 className="font-(family-name:--font-albert-sans) font-semibold text-[28px] leading-[100%] text-white">
           State of the art training excellence for nation building
         </h2>
