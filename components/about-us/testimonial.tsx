@@ -55,12 +55,22 @@ export default function Testimonials() {
 
   return (
     <section className="w-screen min-h-[90vh] relative bg-[#0B0B0B]">
+      {/* Background color image - bottom layer */}
+      <Image
+        src="/about/bg-color.png"
+        alt=""
+        width={280}
+        height={200}
+        className="pointer-events-none blur-3xl absolute bottom-10 left-0 opacity-100"
+        loading="lazy"
+      />
+      {/* Quote image - top layer */}
       <Image
         src="/about/quote.png"
         alt=""
         width={180}
         height={200}
-        className="pointer-events-none absolute bottom-10 left-0 opacity-100"
+        className="pointer-events-none  absolute bottom-10 left-0 opacity-100 z-10"
         loading="lazy"
       />
       <DecorQuotes
