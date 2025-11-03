@@ -6,18 +6,27 @@ import { useState } from "react";
 export default function AboutHeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
-    <section className="w-full bg-black text-white py-16 px-6">
-      <div className="max-w-[1100px] mx-auto">
+    <section className="w-full bg-black text-white py-16 px-6 relative">
+      <div className="absolute blur-[70px] inset-30 flex items-center justify-center overflow-hidden opacity-100">
+        <Image
+          src="/about/bg-color.png"
+          alt="Background"
+          width={1920}
+          height={1080}
+          className="object-cover"
+        />
+      </div>
+      <div className="max-w-[1100px] mx-auto relative z-10">
         <div className="flex flex-col w-full gap-10 items-start">
           {/* Text column */}
           <div className="lg:col-span-5">
             <h2 className="text-5xl font-semibold leading-none tracking-normal text-white mb-4">
               {/* Color the A and U letters to match the reference */}
               <span className="inline-block mr-1">
-                <span className="text-[#eb660c]">A</span>bout
+                <span className="text-[#EA580C]">A</span>bout
               </span>
               <span className="inline-block ml-1">
-                <span className="text-[#109b5d]">U</span>s
+                <span className="text-[#259351]">U</span>s
               </span>
             </h2>
 
