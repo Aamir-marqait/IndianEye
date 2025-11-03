@@ -35,8 +35,28 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="w-full bg-black py-16">
-      <div className="mx-auto px-6 w-full max-w-[1100px]">
+    <section className="w-full bg-black py-16 relative">
+      {/* Top Left Image */}
+      <div className="absolute top-0 -left-7 w-32 h-32 md:w-120 md:h-120  pointer-events-none">
+        <Image
+          src="/home/left.png"
+          alt="Decorative element"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      {/* Bottom Right Image */}
+      <div className="absolute bottom-0 -right-10 w-32 h-32 md:w-120 md:h-120  pointer-events-none">
+        <Image
+          src="/home/right.png"
+          alt="Decorative element"
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+
+      <div className="mx-auto px-6 w-full max-w-[1100px] relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <p
