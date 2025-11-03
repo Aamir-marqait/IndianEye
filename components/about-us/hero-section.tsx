@@ -7,6 +7,14 @@ export default function AboutHeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section className="w-full bg-black text-white py-16 px-6 relative">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <Image
+          src="/about/lines.png"
+          alt="Background Lines"
+          fill
+          className="object-cover"
+        />
+      </div>
       <div className="absolute blur-[70px] inset-30 flex items-center justify-center overflow-hidden opacity-100">
         <Image
           src="/about/bg-color.png"
