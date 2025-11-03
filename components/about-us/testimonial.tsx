@@ -6,35 +6,31 @@ import { useState, useEffect } from "react";
 const testimonials = [
   {
     id: 1,
-    image: "/user.jpg",
     quote:
-      "It is always a learning experience because of the interaction. There is always something new happening and we meet old colleagues.",
-    name: "Dr. Pramod Deo",
-    position: "Former Chairman, CERC",
+      "It is a great pleasure for me to enjoy such a beautiful show by the young boys. And I am trusting Indianeye People to give us proper training of running an Airport and I hope and trust that we will get very good training from Indianeye people as far as managing of an Airport is concern.”",
+    name: "Mr. Bhaskar Rao",
+    position: "IPS IGP - Northern Range, Belgaum",
   },
   {
     id: 2,
-    image: "/user.jpg",
     quote:
-      "It is important that decision-makers and social justice campaigners continue to interface at such forums in order to explore improved ways of monitoring service provider accountability and responsibility to the general public.",
-    name: "Mr. Ishmahil Blagrove Jr",
-    position: "Author and International Social justice Campaigner",
+      "It is a great pleasure for me to enjoy such a beautiful show by the young boys. And I am trusting Indianeye People to give us proper training of running an Airport and I hope and trust that we will get very good training from Indianeye people as far as managing of an Airport is concern.”",
+    name: "Mr. Bhaskar Rao",
+    position: "IPS IGP - Northern Range, Belgaum",
   },
   {
     id: 3,
-    image: "/user.jpg",
     quote:
-      "IPPAl is doing a wonderful job because they bring companies and regulators together, where regulators really hear from companies what their viewpoint is and what problems they are facing. Regulators too talk about the dilemma they face regarding various legal issues. On this platform, there is exchange of ideas and discussion of new areas like solar.",
-    name: "Mr. Sushil Maroo",
-    position: "MD and CEO, Essar Power Limited",
+      "It is a great pleasure for me to enjoy such a beautiful show by the young boys. And I am trusting Indianeye People to give us proper training of running an Airport and I hope and trust that we will get very good training from Indianeye people as far as managing of an Airport is concern.”",
+    name: "Mr. Bhaskar Rao",
+    position: "IPS IGP - Northern Range, Belgaum",
   },
   {
     id: 4,
-    image: "/user.jpg",
     quote:
-      "It's an excellent opportunity to share views for the development of the sector, to exchange ideas, communicate with people and to listen to various opinions, which eventually will enrich and make the entire sector vibrant and strong.",
-    name: "Mr. Gopal Saxena",
-    position: "Director, BRPL and BYPL",
+      "It is a great pleasure for me to enjoy such a beautiful show by the young boys. And I am trusting Indianeye People to give us proper training of running an Airport and I hope and trust that we will get very good training from Indianeye people as far as managing of an Airport is concern.”",
+    name: "Mr. Bhaskar Rao",
+    position: "IPS IGP - Northern Range, Belgaum",
   },
 ];
 
@@ -58,76 +54,66 @@ export default function Testimonials() {
   const currentTestimonial = testimonials[currentSlide];
 
   return (
-    <section
-      className="w-screen relative"
-      style={{
-        background:
-          " linear-gradient(255.27deg, #D3363B 26.48%, #6D1C1E 110.06%)",
-      }}
-    >
+    <section className="w-screen min-h-[90vh] relative bg-[#0B0B0B]">
       <Image
-        src="/optimized/4.webp"
+        src="/about/quote.png"
         alt=""
-        width={240}
-        height={240}
-        className="pointer-events-none absolute -bottom-6 left-0 opacity-100"
+        width={180}
+        height={200}
+        className="pointer-events-none absolute bottom-10 left-0 opacity-100"
         loading="lazy"
       />
       <DecorQuotes
         side="right"
         size={132}
-        className="hidden md:block pointer-events-none absolute top-16 right-20 opacity-100"
+        className="hidden md:block pointer-events-none absolute top-16 right-58 opacity-100"
       />
 
       <div className="mx-auto max-w-[1100px] px-6 md:px-8 py-14 md:py-16 lg:py-20">
         <div className="flex items-center gap-2 mb-4 md:mb-5">
+          <span className="h-5 w-1 rounded-full bg-[#EA580C]" />
           <span
-            className="h-5 w-1 rounded-full"
-            style={{ background: "var(--primary-foreground)" }}
-          />
-          <span className="text-xs sm:text-sm md:text-base xl:text-base font-bold font-red-hat-display leading-none uppercase text-white">
-            Testimonials
+            className="text-base leading-[100%] font-bold uppercase text-[#EA580C] tracking-[0%]"
+            style={{ fontFamily: "Sora, sans-serif" }}
+          >
+            CLIENT Testimonials
           </span>
         </div>
 
-        {/* <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold font-red-hat-display leading-none text-white mb-8 md:mb-10">
+        <h2
+          className="text-[36px] leading-[100%] font-bold text-white tracking-[0%] mb-8 md:mb-10"
+          style={{ fontFamily: "Albert Sans, sans-serif" }}
+        >
           Our Client Experience in Their Own Words
-        </h2> */}
+        </h2>
 
         {/* Content */}
         <div className="flex flex-col md:flex-row items-start md:items-stretch gap-8 md:gap-10">
-          {/* Speaker portrait + dots */}
-          <div className="shrink-0">
-            <div className="relative rounded-2xl overflow-hidden ring-4 ring-white/70 transition-all duration-500">
-              <Image
-                src={currentTestimonial.image}
-                alt="Speaker portrait"
-                width={400}
-                height={300}
-                className="block h-[260px] w-[340px] object-cover md:h-[300px] md:w-[340px] transition-opacity duration-500"
-                loading="lazy"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAhEQACAQIHAQAAAAAAAAAAAAABAgADBAUREiExQVFhkf/aAAwDAQACEQMRAD8A0NbfH2oo2+PlHZ7L93eMuUgPCDkMB74P/9k="
-              />
-            </div>
-          </div>
-
           {/* Quote + meta */}
           <div className="flex-1">
-            <blockquote className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[24px] font-semibold font-red-hat-display leading-none text-white transition-all duration-500">
+            <blockquote
+              className="text-[24px] leading-[150%] font-semibold text-white tracking-[0%] transition-all duration-500"
+              style={{ fontFamily: "Albert Sans, sans-serif" }}
+            >
               &#34;{currentTestimonial.quote}&#34;
             </blockquote>
 
             <div className="mt-6 flex flex-col gap-2 md:mt-7">
-              <p className="text-sm sm:text-base md:text-lg xl:text-[20px] font-bold font-poppins leading-none text-white transition-all duration-500">
+              <p
+                className="text-[20px] leading-[100%] font-bold text-white tracking-[0%] transition-all duration-500"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+              >
                 {currentTestimonial.name}
               </p>
-              <p className="text-sm sm:text-base md:text-lg xl:text-[17px] font-normal font-poppins leading-none text-white/65 transition-all duration-500">
+              <p
+                className="text-[20px] leading-[100%] font-normal text-white/65 tracking-[0%] transition-all duration-500"
+                style={{ fontFamily: "Poppins, sans-serif" }}
+              >
                 {currentTestimonial.position}
               </p>
             </div>
 
-            <div className="mt-10 flex items-center gap-3">
+            <div className="mt-10  flex items-center justify-center gap-3">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
