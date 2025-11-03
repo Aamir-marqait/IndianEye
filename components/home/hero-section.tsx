@@ -17,17 +17,17 @@ export default function HeroBanner() {
       <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-20 md:py-16 relative">
         {/* Heading area */}
         <div className="text-center">
-          <h1 className="text-[48px] font-semibold text-white leading-[100%] font-[family-name:var(--font-albert-sans)]">
+          <h1 className="text-[48px] font-semibold text-white leading-[100%] font-albert-sans">
             Secure Solutions for a Safe Nation
           </h1>
-          <p className="mt-4 text-[16px] font-normal text-white/90 max-w-2xl mx-auto leading-[100%] font-[family-name:var(--font-albert-sans)]">
+          <p className="mt-4 text-[16px] font-normal text-white/90 max-w-2xl mx-auto leading-[100%] font-albert-sans">
             Products & services for smart security, training & technology
           </p>
 
           <div className="mt-8">
             <a
               href="#"
-              className="inline-flex items-center gap-3 text-white px-5 py-3 rounded-full shadow-md transition text-[19px] font-normal leading-[100%] font-[family-name:var(--font-albert-sans)]"
+              className="inline-flex items-center gap-3 text-white px-5 py-3 rounded-full shadow-md transition text-[19px] font-normal leading-[100%] font-albert-sans"
               style={{ backgroundColor: '#EA580C' }}
             >
               <span>Get Involved</span>

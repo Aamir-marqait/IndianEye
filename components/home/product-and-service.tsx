@@ -40,19 +40,15 @@ export default function ServicesSection() {
         {/* Header */}
         <div className="text-center mb-12">
           <p
-            className="text-[20px] font-semibold text-center leading-[24px] font-[family-name:var(--font-albert-sans)]"
+            className="text-[20px] font-semibold text-center leading-6 font-albert-sans"
             style={{ color: "#EA580C" }}
           >
             OUR SERVICES
           </p>
-          <h2
-            className="mt-4 text-[48px] text-white font-semibold text-center leading-[100%] capitalize font-[family-name:var(--font-albert-sans)]"
-          >
+          <h2 className="mt-4 text-[48px] text-white font-semibold text-center leading-[100%] capitalize font-albert-sans">
             Products & <span className="text-white">Services</span>
           </h2>
-          <p
-            className="mt-5 text-[16px] font-normal text-center text-white/80 leading-[100%] max-w-[820px] mx-auto font-[family-name:var(--font-albert-sans)]"
-          >
+          <p className="mt-5 text-[16px] font-normal text-center text-white/80 leading-[100%] max-w-[820px] mx-auto font-albert-sans">
             Comprehensive solutions blending advanced technology with decades of
             security expertise.
           </p>
@@ -84,17 +80,17 @@ export default function ServicesSection() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-[20px] font-bold text-white mb-3 leading-[23px] font-[family-name:var(--font-albert-sans)]">
+                <h3 className="text-[20px] font-bold text-white mb-3 leading-[23px] font-albert-sans">
                   {s.title}
                 </h3>
-                <p className="text-[16px] font-normal text-white mb-6 leading-[150%] font-[family-name:var(--font-albert-sans)]">
+                <p className="text-[16px] font-normal text-white mb-6 leading-[150%] font-albert-sans">
                   {s.description}
                 </p>
 
                 <Link
                   href={s.href || "#"}
-                  className="inline-flex items-center font-medium text-[16px] leading-[23px] underline font-[family-name:var(--font-poppins)]"
-                  style={{ color: '#EA580C' }}
+                  className="inline-flex items-center font-medium text-[16px] leading-[23px] underline font-poppins"
+                  style={{ color: "#EA580C" }}
                 >
                   Learn More
                   <svg
