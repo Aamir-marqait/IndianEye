@@ -42,9 +42,9 @@ export default function InquireSection() {
         />
       </div>
 
-      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-1 items-start relative z-10">
+      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row gap-8 lg:gap-10 items-start  z-10">
         {/* Left column - Intro + decorative artwork */}
-        <div className="w-full lg:w-auto flex flex-col gap-4 md:gap-6 sm:ml-0 lg:ml-5">
+        <div className="w-full lg:w-auto flex flex-col gap-4 md:gap-6 sm:ml-0 md:ml-5 md:pt-0" >
           <div className="flex flex-col gap-1">
             <Image
               src="/transfer-of-tech/Icon.png"
@@ -58,7 +58,7 @@ export default function InquireSection() {
             </h2>
           </div>
 
-          <p className="font-albert-sans font-normal text-[16px] md:text-[17px] lg:text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
+          <p className="font-albert-sans  font-normal text-[16px] md:text-[17px] lg:text-[18px] leading-[150%] tracking-[0%] text-white max-w-md">
             Have questions about our technology transfer services? Get in touch
             with our team to learn how we can help transform your innovations
             into market-ready solutions.
@@ -67,7 +67,7 @@ export default function InquireSection() {
 
         {/* Right column - Form card */}
         <div className="w-full lg:flex-1">
-          <div className="w-full max-w-[780px] opacity-100 border border-[#555555] rounded-[12px] p-4 md:p-6 lg:p-8 shadow-lg mx-auto lg:mx-0">
+          <div className="w-full max-w-[580px] opacity-100 border border-[#555555] rounded-[12px] p-4 md:p-6 lg:p-8 shadow-lg mx-auto lg:mx-0">
             <form className="space-y-4 md:space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -113,6 +113,17 @@ export default function InquireSection() {
                     className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
                   />
                 </div>
+              </div>
+
+              <div>
+                <label className="font-urbanist font-semibold text-[15px] md:text-[17px] leading-[150%] tracking-[0%] text-white block mb-2">
+                  Company Name
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter Company Name"
+                  className="w-full font-urbanist font-medium leading-5 tracking-[0%] bg-[#1A1A1A] border border-[#262626] rounded-xl px-4 py-4 md:py-5 text-[14px] md:text-[16px] text-white placeholder:text-white/40 outline-none focus:ring-2 focus:ring-orange-500/30"
+                />
               </div>
 
               <div>
