@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 
 type Props = {
-
   onCTAClick?: () => void;
 };
 
@@ -59,9 +58,8 @@ export default function HeroSection({ onCTAClick }: Props) {
 
           {/* Image card */}
           <div className="mt-10 md:mt-12 flex justify-center">
-            <div className="w-full sm:w-[92%] md:w-[88%] lg:w-[820px] rounded-[28px] overflow-hidden shadow-2xl">
-              {/* Use next/image if you provide a photo path (photo="") */}
-              <div className="relative w-full h-80 sm:h-[360px] md:h-[400px] lg:h-[420px]">
+            <div className="w-full sm:w-[92%] md:w-[88%] lg:w-[1120px] rounded-[28px] overflow-hidden shadow-2xl">
+              <div className="relative w-full h-80 sm:h-[360px] md:h-[400px] lg:h-[520px]">
                 <Image
                   src={"/tsd/hero.png"}
                   alt="Guardians marching"
@@ -75,8 +73,6 @@ export default function HeroSection({ onCTAClick }: Props) {
           </div>
         </div>
       </div>
-
-      
     </section>
   );
 }
