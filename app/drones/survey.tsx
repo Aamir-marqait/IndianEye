@@ -1,19 +1,6 @@
-import React from "react";
 import Image from "next/image";
 
-type Props = {
-  /**
-   * Optional decorative background image you mentioned (kept invisible so the section background remains pure black).
-   * Pass it like: <IrrigationSurvey bgImage="/images/bg.jpg" image="/images/irrigation.jpg" />
-   */
-  bgImage?: string;
-  /**
-   * Main left image for the irrigation visual. Default is empty string so you can pass your own image path.
-   */
-  image?: string;
-};
-
-export default function Survey({ bgImage, image = "" }: Props) {
+export default function Survey() {
   return (
     <section className="w-full bg-black text-white py-12">
       {/* Keep the visible background strictly black as requested */}
@@ -23,84 +10,237 @@ export default function Survey({ bgImage, image = "" }: Props) {
           <div className="w-full">
             <div className="rounded-2xl overflow-hidden bg-gray-900/20 ring-0">
               <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-72">
-                {image ? (
-                  <Image
-                    src={image}
-                    alt="Irrigation survey visual"
-                    layout="fill"
-                    objectFit="cover"
-                    className="object-center"
-                    priority
-                  />
-                ) : (
-                  <div className="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-500">
-                    <span className="text-sm">
-                      Image source is empty — pass image prop
-                    </span>
-                  </div>
-                )}
+                <Image
+                  src="/drone/is.png"
+                  alt="Irrigation survey visual"
+                  layout="fill"
+                  objectFit="cover"
+                  className="object-center"
+                  priority
+                />
               </div>
             </div>
           </div>
 
           {/* Right: content */}
           <div className="w-full">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+            <h2
+              className="text-[48px] leading-[100%] font-bold  text-white mb-4"
+              style={{ fontFamily: "Albert Sans" }}
+            >
               Irrigation Survey
             </h2>
 
-            <h3 className="text-sm text-gray-300 font-medium mb-4">
+            <h3
+              className="text-[20px] leading-[100%] font-medium text-white mb-4"
+              style={{ fontFamily: "Albert Sans" }}
+            >
               Scope of Operations
             </h3>
 
-            <ul className="space-y-3 text-sm text-gray-300 list-none">
+            <ul className="space-y-3 list-none">
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-white/80 flex-shrink-0" />
-                <span>
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
                   Generating the Orthographic map and defining area under the
                   irrigation department.
                 </span>
               </li>
 
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-white/80 flex-shrink-0" />
-                <span>Identification of Irrigation Infrastructure</span>
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Identification of Irrigation Infrastructure
+                </span>
               </li>
 
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-white/80 flex-shrink-0" />
-                <span>
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
                   Digitization of Water Project/ Dam, River and Canals
                 </span>
               </li>
 
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-white/80 flex-shrink-0" />
-                <span>
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
                   Identifying the Crop type and the area of cultivation
                 </span>
               </li>
 
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-white/80 flex-shrink-0" />
-                <span>Exact area of cultivation</span>
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Exact area of cultivation
+                </span>
               </li>
 
               <li className="flex items-start gap-3">
-                <span className="mt-1 inline-flex h-2 w-2 rounded-full bg-white/80 flex-shrink-0" />
-                <span>Identifying the water source</span>
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Identifying the water source
+                </span>
               </li>
             </ul>
           </div>
         </div>
-      </div>
 
-      {/* Hidden background image (optional) so you can pass bgImage="" without changing the visible black background */}
-      {bgImage ? (
-        <div className="sr-only" aria-hidden>
-          <Image src={bgImage} alt="" width={1600} height={600} />
+        {/* UAV Based Survey for Watershed Management - Text Left, Images Right (2x2 grid) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-16">
+          {/* Left: content */}
+          <div className="w-full">
+            <h2
+              className="text-[48px] leading-[100%] font-bold text-white mb-4"
+              style={{ fontFamily: "Albert Sans" }}
+            >
+              UAV Based Survey for Watershed Management
+            </h2>
+
+            <ul className="space-y-3 list-none">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Acquisition of Data by UAV of Entire Watershed Area
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  3D Digital Elevation Modelling of Watershed Area
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Comparison with Existing Sources of the Government
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Preparation of Watershed Management Report
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right: single image */}
+          <div className="w-full">
+            <div className="rounded-2xl overflow-hidden bg-gray-900/20">
+              <div className="relative w-full h-64 sm:h-72 md:h-80">
+                <Image
+                  src="/drone/a.png"
+                  alt="Watershed management"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      ) : null}
+
+        {/* Anti-Mining: Mapping and Surveillance - Image Right, Text Left */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mt-16">
+          {/* Left: content */}
+          <div className="w-full">
+            <h2
+              className="text-[48px] leading-[100%] font-bold text-white mb-4"
+              style={{ fontFamily: "Albert Sans" }}
+            >
+              Anti-Mining: Mapping and Surveillance
+            </h2>
+
+            <ul className="space-y-3 list-none">
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Illegal Mining Detection
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Monitoring of Licensed Mining
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Survey of Proposed Locations
+                </span>
+              </li>
+
+              <li className="flex items-start gap-3">
+                <span className="mt-1 inline-flex h-1.5 w-1.5 rounded-full bg-white shrink-0" />
+                <span
+                  className="text-[16px] leading-[100%] font-normal text-white"
+                  style={{ fontFamily: "Albert Sans" }}
+                >
+                  Environmental Impact Assessment
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Right: single large image */}
+          <div className="w-full">
+            <div className="rounded-2xl overflow-hidden bg-gray-900/20">
+              <div className="relative w-full h-64 sm:h-72 md:h-80">
+                <Image
+                  src="/drone/b.png"
+                  alt="Anti-mining surveillance"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

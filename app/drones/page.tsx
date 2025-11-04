@@ -1,6 +1,7 @@
 import HeroSection from "./hero-section";
 import ProductsSection from "./product-section";
 import ServicesUAV from "./ServicesUAV";
+import Survey from "./survey";
 
 function page() {
   return (
@@ -8,6 +9,7 @@ function page() {
       <HeroSection />
       <ProductsSection />
       <ServicesUAV />
+      <Survey />
     </div>
   );
 }
