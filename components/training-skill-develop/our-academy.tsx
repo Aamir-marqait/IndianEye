@@ -67,7 +67,7 @@ export default function OurAcademy({
   }
 
   return (
-    <section className="w-full relative overflow-hidden bg-black py-16">
+    <section className="w-full relative overflow-hidden bg-[#171717] py-16">
       {/* Background image you own - left empty by default */}
       <div
         aria-hidden

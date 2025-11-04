@@ -55,9 +55,9 @@ export default function AchievementsCarousel({
     // keyboard support
     function onKey(e: KeyboardEvent) {
       if (e.key === "ArrowRight") {
-        setActive((s) => Math.min(s + 1, ACHIEVEMENTS.length - 1));
+        setActive((s) => (s + 1) % ACHIEVEMENTS.length);
       } else if (e.key === "ArrowLeft") {
-        setActive((s) => Math.max(s - 1, 0));
+        setActive((s) => (s - 1 + ACHIEVEMENTS.length) % ACHIEVEMENTS.length);
       }
     }
     window.addEventListener("keydown", onKey);
@@ -65,24 +65,26 @@ export default function AchievementsCarousel({
   }, []);
 
   function prev() {
-    setActive((s) => Math.max(s - 1, 0));
+    setActive((s) => (s - 1 + ACHIEVEMENTS.length) % ACHIEVEMENTS.length);
   }
   function next() {
-    setActive((s) => Math.min(s + 1, ACHIEVEMENTS.length - 1));
+    setActive((s) => (s + 1) % ACHIEVEMENTS.length);
   }
 
   return (
-    <section className="w-full bg-black text-white py-16">
-      {/* note: as requested background is kept black only.
-          If you want to use a decorative background image, pass bgImage prop,
-          currently it's not rendered visually to keep background pure black.
-          An invisible Image element with src is included below so you can easily set src="" as requested. */}
+    <section className="w-full bg-[#171717] text-white py-5">
       <div className="mx-auto px-12 w-full max-w-screen ">
         <div className="text-center mb-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
+          <h2
+            className="text-[48px] leading-[70px] font-semibold text-white text-center capitalize"
+            style={{ fontFamily: "Albert Sans" }}
+          >
             Our Achievements
           </h2>
-          <p className="mt-3 text-sm md:text-base text-gray-300 max-w-[820px] mx-auto">
+          <p
+            className="mt-3 text-[16px] leading-[23px] font-normal text-white text-center max-w-[820px] mx-auto"
+            style={{ fontFamily: "Albert Sans" }}
+          >
             Comprehensive solutions blending advanced technology with decades of
             security expertise.
           </p>
@@ -150,41 +152,39 @@ export default function AchievementsCarousel({
                 return (
                   <div
                     key={a.id}
-                    ref={(el) => (slideRefs.current[i] = el)}
+                    ref={(el) => {
+                      slideRefs.current[i] = el;
+                    }}
                     onClick={() => setActive(i)}
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") setActive(i);
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setActive(i);
+                      }
                     }}
-                    className={`shrink-0 w-[290px] sm:w-[340px] md:w-[360px] lg:w-[380px] snap-center rounded-2xl transition-all duration-400 outline-none
+                    className={`shrink-0 w-[444px] h-[149px] snap-center rounded-[16px] transition-all duration-400 outline-none pt-[40px] pr-[32px] pb-[40px] pl-[32px] flex items-center gap-2
                       ${
                         i === active
-                          ? "scale-100 ring-2 ring-emerald-500/90"
-                          : "scale-95"
+                          ? "scale-100"
+                          : "scale-95 opacity-70"
                       }
                     `}
                     style={{
                       background:
-                        "linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015))",
-                      minHeight: "160px",
-                      display: "flex",
-                      alignItems: "center",
+                        "linear-gradient(96.79deg, #171717 -62.94%, #323335 -62.92%, rgba(90, 90, 90, 0) 54.42%, #171717 174.24%)",
+                      backdropFilter: "blur(50px)",
                     }}
                   >
-                    <div
-                      className={`m-4 md:m-6 p-4 md:p-6 rounded-xl w-full h-full flex items-center transition-colors duration-300 ${
-                        i === active ? "bg-transparent" : "bg-black/40"
+                    <p
+                      className={`text-[16px] leading-[100%] font-normal ${
+                        i === active ? "text-white" : "text-gray-300"
                       }`}
+                      style={{ fontFamily: "Poppins" }}
                     >
-                      <p
-                        className={`text-sm md:text-base leading-relaxed text-gray-200 ${
-                          i === active ? "text-white" : "text-gray-300"
-                        }`}
-                      >
-                        {a.text}
-                      </p>
-                    </div>
+                      {a.text}
+                    </p>
                   </div>
                 );
               })}
