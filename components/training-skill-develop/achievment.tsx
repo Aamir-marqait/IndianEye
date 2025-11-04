@@ -34,9 +34,16 @@ export default function AchievementsCarousel() {
   const [active, setActive] = useState<number>(1); // start with second item visible like reference
   const containerRef = useRef<HTMLDivElement | null>(null);
   const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
+  const isInitialMount = useRef(true);
 
   useEffect(() => {
-    // Scroll the active slide into view centered
+    // Skip scroll on initial mount to prevent auto-scrolling to this section
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    // Scroll the active slide into view centered (only on user interaction)
     const node = slideRefs.current[active];
     if (node) {
       node.scrollIntoView({
