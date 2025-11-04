@@ -126,21 +126,14 @@ const PRODUCTS: Product[] = [
   },
 ];
 
-export default function ProductsSection({
-  bgImage = "",
-}: {
-  bgImage?: string;
-}) {
+export default function ProductsSection() {
   return (
     <section className="w-full bg-black text-white py-16">
-      {/* keep visible background strictly black per request.
-          The bgImage prop is accepted but not rendered as visual background (keeps bg black).
-          A hidden Image is included at the bottom so you can set src="" as you requested. */}
       <div className="mx-auto px-6 w-full max-w-[1100px]">
         {/* Header */}
         <div className="text-center mb-8">
           <h2
-            className="text-[48px] leading-[100%] font-semibold text-white"
+            className="text-12 leading-[100%] font-semibold text-white"
             style={{ fontFamily: "Albert Sans" }}
           >
             Products
@@ -160,11 +153,6 @@ export default function ProductsSection({
             <ProductCard key={p.id} product={p} />
           ))}
         </div>
-      </div>
-
-      {/* hidden image placeholder so you can set the bg image src="" if you want, kept invisible to preserve black bg */}
-      <div className="sr-only" aria-hidden>
-        <Image src={bgImage || ""} alt="" width={1600} height={800} />
       </div>
     </section>
   );
@@ -193,7 +181,7 @@ function ProductCard({ product }: { product: Product }) {
         <div className="flex items-center gap-3 w-full">
           {product.thumbs.map((t, i) => (
             <button
-              key={t}
+              key={i}
               onClick={() => setActiveThumb(i)}
               className={`rounded-lg overflow-hidden flex-1 h-32 border transition-all ${
                 activeThumb === i
@@ -285,7 +273,7 @@ function ProductCard({ product }: { product: Product }) {
                 <div key={idx} className="space-y-4">
                   {/* Icon and Title */}
                   <div className="flex items-center gap-3">
-                    <div className="w-[48px] h-[48px] rounded-full border border-[#555555] flex items-center justify-center shrink-0">
+                    <div className="w-12 h-12 rounded-full border border-[#555555] flex items-center justify-center shrink-0">
                       <Image
                         src={app.icon}
                         alt={app.title}
