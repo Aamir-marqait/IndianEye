@@ -30,11 +30,7 @@ const ACHIEVEMENTS: Achievement[] = [
   },
 ];
 
-export default function AchievementsCarousel({
-  bgImage = "",
-}: {
-  bgImage?: string;
-}) {
+export default function AchievementsCarousel() {
   const [active, setActive] = useState<number>(1); // start with second item visible like reference
   const containerRef = useRef<HTMLDivElement | null>(null);
   const slideRefs = useRef<Array<HTMLDivElement | null>>([]);
@@ -72,8 +68,19 @@ export default function AchievementsCarousel({
   }
 
   return (
-    <section className="w-full bg-[#171717] text-white py-5">
-      <div className="mx-auto px-12 w-full max-w-screen ">
+    <section className="w-full bg-[#171717] text-white py-5 relative overflow-hidden">
+      {/* Decorative element in right corner */}
+      <div className="absolute top-0 right-0 pointer-events-none">
+        <Image
+          src="/tsd/element2.png"
+          alt=""
+          width={300}
+          height={300}
+          className="opacity-50"
+        />
+      </div>
+
+      <div className="mx-auto px-12 w-full max-w-screen relative z-10">
         <div className="text-center mb-8">
           <h2
             className="text-[48px] leading-[70px] font-semibold text-white text-center capitalize"
@@ -164,12 +171,8 @@ export default function AchievementsCarousel({
                         setActive(i);
                       }
                     }}
-                    className={`shrink-0 w-[444px] h-[149px] snap-center rounded-[16px] transition-all duration-400 outline-none pt-[40px] pr-[32px] pb-[40px] pl-[32px] flex items-center gap-2
-                      ${
-                        i === active
-                          ? "scale-100"
-                          : "scale-95 opacity-70"
-                      }
+                    className={`shrink-0 w-[444px] h-[149px] snap-center rounded-2xl transition-all duration-400 outline-none pt-10 pr-8 pb-10 pl-8 flex items-center gap-2
+                      ${i === active ? "scale-100" : "scale-95 opacity-70"}
                     `}
                     style={{
                       background:
@@ -205,11 +208,6 @@ export default function AchievementsCarousel({
             ))}
           </div>
         </div>
-      </div>
-
-      {/* invisible image placeholder so you can set src="" per your workflow (kept hidden to ensure background remains pure black) */}
-      <div className="hidden" aria-hidden>
-        <Image src={bgImage ?? ""} alt="" width={1600} height={600} />
       </div>
 
       <style jsx>{`
