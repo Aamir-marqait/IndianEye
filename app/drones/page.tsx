@@ -2,6 +2,7 @@ import HeroSection from "./hero-section";
 import ProductsSection from "./product-section";
 import ServicesUAV from "./ServicesUAV";
 import Survey from "./survey";
+import WhatWeDo from "./what-we-do";
 
 function page() {
   return (
@@ -10,6 +11,7 @@ function page() {
       <ProductsSection />
       <ServicesUAV />
       <Survey />
+      <WhatWeDo />
     </div>
   );
 }

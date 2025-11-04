@@ -86,7 +86,7 @@ const BOTTOM_COLS: ServiceCol[] = [
   },
 ];
 
-export default function ServicesUAV({ bgImage = "" }: { bgImage?: string }) {
+export default function ServicesUAV() {
   return (
     <section className="w-full bg-black text-white py-16">
       {/* background is intentionally kept pure black as requested */}
@@ -212,11 +212,6 @@ export default function ServicesUAV({ bgImage = "" }: { bgImage?: string }) {
 
         {/* Footer spacing */}
         <div className="pt-10" />
-
-        {/* Hidden image element so you can provide a bg image path without changing visual black bg */}
-        <div className="sr-only" aria-hidden>
-          <Image src={bgImage || ""} alt="" width={1600} height={900} />
-        </div>
       </div>
     </section>
   );
