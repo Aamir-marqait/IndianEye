@@ -28,7 +28,9 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "components/training-skill-develop", "app/training-skill-develop"  ],
+    "**/*.mts",
+    "components/training-skill-develop",
+    "app/training-and-skill-development"
+  ],
   "exclude": ["node_modules"]
 }

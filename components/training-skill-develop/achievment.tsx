@@ -45,11 +45,16 @@ export default function AchievementsCarousel() {
 
     // Scroll the active slide into view centered (only on user interaction)
     const node = slideRefs.current[active];
-    if (node) {
-      node.scrollIntoView({
-        behavior: "smooth",
-        inline: "center",
-        block: "nearest",
+    if (node && containerRef.current) {
+      // Only scroll horizontally within the container, not the whole page
+      const container = containerRef.current;
+      const nodeLeft = node.offsetLeft;
+      const containerWidth = container.offsetWidth;
+      const nodeWidth = node.offsetWidth;
+
+      container.scrollTo({
+        left: nodeLeft - (containerWidth / 2) + (nodeWidth / 2),
+        behavior: "smooth"
       });
     }
   }, [active]);
