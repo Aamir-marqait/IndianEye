@@ -34,7 +34,7 @@ const Header = () => {
         <nav className="hidden lg:flex items-center gap-5">
           <Link
             href="/home"
-            className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
+            className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
           >
             Home
             <span
@@ -48,7 +48,7 @@ const Header = () => {
           <div className="flex items-center gap-1.5 group">
             <Link
               href="/product"
-              className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
+              className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
             >
               Product
               <span
@@ -64,7 +64,7 @@ const Header = () => {
           <div className="flex items-center gap-1.5 group">
             <Link
               href="/service"
-              className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
+              className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
             >
               Service
               <span
@@ -78,13 +78,13 @@ const Header = () => {
             <ChevronDown size={20} color="#fff" />
           </div>
           <Link
-            href="/training"
-            className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
+            href="/training-and-skill-development"
+            className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
           >
             Training & skill development
             <span
               className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
-                isActive("/training")
+                isActive("/training-and-skill-development")
                   ? "w-1/2"
                   : "w-0 group-hover:w-1/2 group-focus:w-1/2"
               }`}
@@ -92,7 +92,7 @@ const Header = () => {
           </Link>
           <Link
             href="/about-us"
-            className="relative font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
+            className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1 group"
           >
             About Us
             <span
@@ -108,7 +108,7 @@ const Header = () => {
         {/* Desktop Contact Button */}
         <Link
           href="/contact-us"
-          className="hidden lg:flex bg-[#EA580C] font-(family-name:--font-albert-sans) text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle rounded-4xl px-5 py-2.5 no-underline items-center gap-1.5 hover:bg-[#dc4d07] transition-colors"
+          className="hidden lg:flex bg-[#EA580C] font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle rounded-4xl px-5 py-2.5 no-underline items-center gap-1.5 hover:bg-[#dc4d07] transition-colors"
         >
           <IoIosCall />
           Contact Us
@@ -130,7 +130,7 @@ const Header = () => {
           <nav className="flex flex-col px-4 py-4">
             <Link
               href="/home"
-              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
+              className={`font-albert-sans text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
                 isActive("/home") ? "text-[#EA580C]" : "text-white"
               }`}
               onClick={() => setIsMenuOpen(false)}
@@ -141,7 +141,7 @@ const Header = () => {
               <div className="flex items-center justify-between">
                 <Link
                   href="/product"
-                  className={`font-(family-name:--font-albert-sans) text-[17px] font-normal transition-colors ${
+                  className={`font-albert-sans text-[17px] font-normal transition-colors ${
                     isActive("/product") ? "text-[#EA580C]" : "text-white"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -155,7 +155,7 @@ const Header = () => {
               <div className="flex items-center justify-between">
                 <Link
                   href="/service"
-                  className={`font-(family-name:--font-albert-sans) text-[17px] font-normal transition-colors ${
+                  className={`font-albert-sans text-[17px] font-normal transition-colors ${
                     isActive("/service") ? "text-[#EA580C]" : "text-white"
                   }`}
                   onClick={() => setIsMenuOpen(false)}
@@ -166,9 +166,9 @@ const Header = () => {
               </div>
             </div>
             <Link
-              href="/training"
-              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
-                isActive("/training") ? "text-[#EA580C]" : "text-white"
+              href="/training-and-skill-development"
+              className={`font-albert-sans text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
+                isActive("/training-and-skill-development") ? "text-[#EA580C]" : "text-white"
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -176,7 +176,7 @@ const Header = () => {
             </Link>
             <Link
               href="/about"
-              className={`font-(family-name:--font-albert-sans) text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
+              className={`font-albert-sans text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
                 isActive("/about") ? "text-[#EA580C]" : "text-white"
               }`}
               onClick={() => setIsMenuOpen(false)}
@@ -185,7 +185,7 @@ const Header = () => {
             </Link>
             <Link
               href="/contact"
-              className="bg-[#EA580C] font-(family-name:--font-albert-sans) text-white text-[17px] font-normal rounded-4xl px-5 py-3 mt-4 flex items-center justify-center gap-2 hover:bg-[#dc4d07] transition-colors"
+              className="bg-[#EA580C] font-albert-sans text-white text-[17px] font-normal rounded-4xl px-5 py-3 mt-4 flex items-center justify-center gap-2 hover:bg-[#dc4d07] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               <IoIosCall size={20} />
