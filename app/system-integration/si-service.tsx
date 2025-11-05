@@ -25,7 +25,7 @@ export default function SIService() {
           {/* Right: content */}
           <div className="w-full">
             <h2
-              className="text-[48px] min-w-xl leading-[100%] font-bold  text-white mb-4"
+              className="text-[48px] md:min-w-xl leading-[100%] font-bold  text-white mb-4"
               style={{ fontFamily: "Albert Sans" }}
             >
               Our System Integration Capabilities

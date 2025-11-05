@@ -1,4 +1,5 @@
 import HeroSection from "./hero-section";
+import IntegratedCCTV from "./IntegratedCCTV";
 import SIService from "./si-service";
 
 function page() {
@@ -6,6 +7,7 @@ function page() {
     <div>
       <HeroSection />
       <SIService />
+      <IntegratedCCTV />
     </div>
   );
 }
