@@ -11,6 +11,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
   const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
+  const [isMobileProductOpen, setIsMobileProductOpen] = useState(false);
+  const [isMobileServiceOpen, setIsMobileServiceOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -167,33 +169,71 @@ const Header = () => {
             >
               Home
             </Link>
-            <div className="py-3 border-b border-gray-700">
-              <div className="flex items-center justify-between">
-                <Link
-                  href="/product"
-                  className={`font-albert-sans text-[17px] font-normal transition-colors ${
-                    isActive("/product") ? "text-[#EA580C]" : "text-white"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
+            <div className="border-b border-gray-700">
+              <div
+                className="flex items-center justify-between py-3 cursor-pointer"
+                onClick={() => setIsMobileProductOpen(!isMobileProductOpen)}
+              >
+                <span className="font-albert-sans text-white text-[17px] font-normal">
                   Product
-                </Link>
-                <ChevronDown size={20} color="#fff" />
+                </span>
+                <ChevronDown
+                  size={20}
+                  color="#fff"
+                  className={`transition-transform duration-300 ${isMobileProductOpen ? 'rotate-180' : ''}`}
+                />
               </div>
+              {isMobileProductOpen && (
+                <div className="pl-4 pb-3 flex flex-col gap-2">
+                  <Link
+                    href="/drones"
+                    className="font-albert-sans text-gray-300 text-[15px] font-normal py-2 hover:text-[#EA580C] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Drone
+                  </Link>
+                  <Link
+                    href="/counter-drone-solution"
+                    className="font-albert-sans text-gray-300 text-[15px] font-normal py-2 hover:text-[#EA580C] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Counter Drone Solution
+                  </Link>
+                  <Link
+                    href="/system-integration"
+                    className="font-albert-sans text-gray-300 text-[15px] font-normal py-2 hover:text-[#EA580C] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    System Integration
+                  </Link>
+                </div>
+              )}
             </div>
-            <div className="py-3 border-b border-gray-700">
-              <div className="flex items-center justify-between">
-                <Link
-                  href="/service"
-                  className={`font-albert-sans text-[17px] font-normal transition-colors ${
-                    isActive("/service") ? "text-[#EA580C]" : "text-white"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
+            <div className="border-b border-gray-700">
+              <div
+                className="flex items-center justify-between py-3 cursor-pointer"
+                onClick={() => setIsMobileServiceOpen(!isMobileServiceOpen)}
+              >
+                <span className="font-albert-sans text-white text-[17px] font-normal">
                   Service
-                </Link>
-                <ChevronDown size={20} color="#fff" />
+                </span>
+                <ChevronDown
+                  size={20}
+                  color="#fff"
+                  className={`transition-transform duration-300 ${isMobileServiceOpen ? 'rotate-180' : ''}`}
+                />
               </div>
+              {isMobileServiceOpen && (
+                <div className="pl-4 pb-3">
+                  <Link
+                    href="/transfer-of-technology"
+                    className="font-albert-sans text-gray-300 text-[15px] font-normal py-2 block hover:text-[#EA580C] transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Transfer of Technology
+                  </Link>
+                </div>
+              )}
             </div>
             <Link
               href="/training-and-skill-development"
@@ -205,7 +245,7 @@ const Header = () => {
               Training & skill development
             </Link>
             <Link
-              href="/about"
+              href="/about-us"
               className={`font-albert-sans text-[17px] font-normal py-3 border-b border-gray-700 transition-colors ${
                 isActive("/about") ? "text-[#EA580C]" : "text-white"
               }`}
@@ -214,7 +254,7 @@ const Header = () => {
               About Us
             </Link>
             <Link
-              href="/contact"
+              href="/contact-us"
               className="bg-[#EA580C] font-albert-sans text-white text-[17px] font-normal rounded-4xl px-5 py-3 mt-4 flex items-center justify-center gap-2 hover:bg-[#dc4d07] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
