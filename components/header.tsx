@@ -9,6 +9,8 @@ import { IoIosCall } from "react-icons/io";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+  const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => {
@@ -45,37 +47,65 @@ const Header = () => {
               }`}
             ></span>
           </Link>
-          <div className="flex items-center gap-1.5 group">
-            <Link
-              href="/product"
-              className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
-            >
+          <div
+            className="relative flex items-center gap-1.5 cursor-pointer group"
+            onMouseEnter={() => setIsProductDropdownOpen(true)}
+            onMouseLeave={() => setIsProductDropdownOpen(false)}
+          >
+            <span className="font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle">
               Product
-              <span
-                className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
-                  isActive("/product")
-                    ? "w-1/2"
-                    : "w-0 group-hover:w-1/2 group-focus:w-1/2"
-                }`}
-              ></span>
-            </Link>
+            </span>
             <ChevronDown size={20} color="#fff" />
+
+            {/* Dropdown Menu */}
+            {isProductDropdownOpen && (
+              <div className="absolute top-full pt-2 left-0 z-50">
+                <div className="bg-black border border-gray-800 rounded-md shadow-lg py-2 min-w-[220px]">
+                  <Link
+                    href="/drone"
+                    className="block px-4 py-2.5 text-white text-[17px] font-albert-sans hover:bg-gray-900 transition-colors"
+                  >
+                    Drone
+                  </Link>
+                  <Link
+                    href="/counter-drone-solution"
+                    className="block px-4 py-2.5 text-white text-[17px] font-albert-sans hover:bg-gray-900 transition-colors"
+                  >
+                    Counter Drone Solution
+                  </Link>
+                  <Link
+                    href="/system-integration"
+                    className="block px-4 py-2.5 text-white text-[17px] font-albert-sans hover:bg-gray-900 transition-colors"
+                  >
+                    System Integration
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
-          <div className="flex items-center gap-1.5 group">
-            <Link
-              href="/service"
-              className="relative font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle no-underline transition-colors pb-1"
-            >
+          <div
+            className="relative flex items-center gap-1.5 cursor-pointer group"
+            onMouseEnter={() => setIsServiceDropdownOpen(true)}
+            onMouseLeave={() => setIsServiceDropdownOpen(false)}
+          >
+            <span className="font-albert-sans text-white text-[19px] font-normal leading-[100%] tracking-[0%] align-middle">
               Service
-              <span
-                className={`absolute bottom-0 top-7 left-1/2 -translate-x-1/2 h-0.5 bg-white transition-all duration-300 ${
-                  isActive("/service")
-                    ? "w-1/2"
-                    : "w-0 group-hover:w-1/2 group-focus:w-1/2"
-                }`}
-              ></span>
-            </Link>
+            </span>
             <ChevronDown size={20} color="#fff" />
+
+            {/* Dropdown Menu */}
+            {isServiceDropdownOpen && (
+              <div className="absolute top-full pt-2 left-0 z-50">
+                <div className="bg-black border border-gray-800 rounded-md shadow-lg py-2 min-w-[220px]">
+                  <Link
+                    href="/transfer-of-technology"
+                    className="block px-4 py-2.5 text-white text-[17px] font-albert-sans hover:bg-gray-900 transition-colors"
+                  >
+                    Transfer of Technology
+                  </Link>
+                </div>
+              </div>
+            )}
           </div>
           <Link
             href="/training-and-skill-development"

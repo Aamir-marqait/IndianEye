@@ -15,21 +15,21 @@ const services: Service[] = [
     description:
       "Comprehensive solutions blending advanced technology with decades of security expertise.",
     image: "/home/d.png", // replace with your image path or external url
-    href: "#",
+    href: "/drones",
   },
   {
     title: "Counter Drone solutions",
     description:
       "Comprehensive solutions blending advanced technology with decades of security expertise.",
     image: "/home/cd.png",
-    href: "#",
+    href: "/counter-drone-solution",
   },
   {
     title: "System Integration",
     description:
       "Comprehensive solutions blending advanced technology with decades of security expertise.",
     image: "/home/si.png",
-    href: "#",
+    href: "/system-integration",
   },
 ];
 
