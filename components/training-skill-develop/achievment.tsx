@@ -156,7 +156,7 @@ export default function AchievementsCarousel() {
           {/* Scrollable track with snap */}
           <div
             ref={containerRef}
-            className="px-2 md:px-6 overflow-x-auto scrollbar-hide scroll-smooth"
+            className="px-0 md:px-6 overflow-x-auto scrollbar-hide scroll-smooth"
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             <div
@@ -207,7 +207,7 @@ export default function AchievementsCarousel() {
           </div>
 
           {/* Pagination dots */}
-          <div className="mt-6 flex items-center justify-center gap-3">
+          <div className="hidden  mt-6 md:flex items-center justify-center gap-3">
             {ACHIEVEMENTS.map((_, i) => (
               <button
                 key={i}
