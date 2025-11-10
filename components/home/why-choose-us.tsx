@@ -72,7 +72,7 @@ export default function WhyChooseUs() {
                   src="/home/r.png"
                   alt="large"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                   className="object-center"
                 />
               </div>

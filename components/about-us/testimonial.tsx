@@ -54,14 +54,14 @@ export default function Testimonials() {
   const currentTestimonial = testimonials[currentSlide];
 
   return (
-    <section className="max-w-screen min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] relative bg-[#0B0B0B]">
+    <section className="max-w-screen min-h-[50vh] md:min-h-[50vh] lg:min-h-[70vh] relative bg-[#0B0B0B]">
       {/* Background color image - bottom layer */}
       <Image
         src="/about/bg-color.png"
         alt=""
         width={200}
         height={150}
-        className="pointer-events-none blur-3xl absolute bottom-6 md:bottom-10 left-0 opacity-100 w-[200px] md:w-[280px]"
+        className="pointer-events-none  blur-3xl absolute bottom-6 md:bottom-10 left-0 opacity-100 w-[200px] md:w-[280px]"
         loading="lazy"
       />
       {/* Quote image - top layer */}
