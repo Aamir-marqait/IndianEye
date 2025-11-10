@@ -24,10 +24,10 @@ export default function Footer() {
               className="h-10 md:h-12 mb-3 md:mb-4"
             />
             <p className="font-inter font-normal text-sm md:text-[15px] leading-relaxed md:leading-[100%] text-white mb-5 md:mb-7 max-w-[280px] md:max-w-none">
-              Torem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-              vulputate libero et velit interdum, ac aliquet odio mattis.
+              Indianeye delivers advanced drone platforms, counter‑drone solutions, and
+              system integration services—backed by technology transfer and industry‑ready training.
             </p>
-            <div className="flex gap-3 md:gap-4">
+            {/* <div className="flex gap-3 md:gap-4">
               <Link
                 href="#"
                 className="bg-[#EFEFEF] text-black hover:bg-[#FF801F] rounded-full p-2 transition"
@@ -63,87 +63,79 @@ export default function Footer() {
               >
                 <Linkedin size={16} className="md:w-[18px] md:h-[18px]" />
               </Link>
-            </div>
+            </div> */}
           </div>
 
-          {/* Services + Quick Links Container */}
+          {/* Products & Services + Quick Links Container */}
           <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 md:gap-16">
-            {/* Services */}
-            <div className="flex-1 sm:min-w-40 md:min-w-[180px]">
-              <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-lg md:text-[22px] leading-7 md:leading-[30px] text-white mb-2 md:mb-3">
-                Services
+            {/* Products & Services */}
+            <div className="flex-1 sm:min-w-40 md:min-w-[220px]">
+              <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-lg md:text-[22px] leading-7 md:leading-[30px] text-white mb-2 md:mb-3 whitespace-nowrap">
+                Products & Services
               </h5>
               <ul className="space-y-1.5 md:space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/drones"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Mistakes To Avoid
+                    Drone
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/counter-drone-solution"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Your Startup
+                    Counter Drone Solution
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/system-integration"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Knew About Fonts
+                    System Integration
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/transfer-of-technology"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Knew About Fonts
+                    Transfer of Technology
                   </Link>
                 </li>
               </ul>
             </div>
             {/* Quick Links */}
-            <div className="flex-1 sm:min-w-40 md:min-w-[180px]">
+            <div className="flex-1 sm:min-w-40 md:min-w-[200px]">
               <h5 className="font-(family-name:--font-plus-jakarta-sans) font-bold text-lg md:text-[22px] leading-7 md:leading-[30px] text-white mb-2 md:mb-3">
                 Quick Links
               </h5>
               <ul className="space-y-1.5 md:space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="/about-us"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Mistakes To Avoid
+                    About Us
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/contact-us"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Your Startup
+                    Contact Us
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/training-and-skill-development#achievements"
                     className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
                   >
-                    Knew About Fonts
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="font-(family-name:--font-plus-jakarta-sans) font-normal text-sm md:text-base leading-[26px] md:leading-[30px] text-white hover:text-white/80"
-                  >
-                    Knew About Fonts
+                    Our Achievements
                   </Link>
                 </li>
               </ul>
