@@ -80,7 +80,7 @@ export default function AchievementsCarousel() {
   }
 
   return (
-    <section className="w-full bg-[#171717] text-white py-8 md:py-5 relative overflow-hidden">
+    <section id="achievements" className="w-full bg-[#171717] text-white py-8 md:py-5 relative overflow-hidden">
       {/* Decorative element in right corner */}
       <div className="absolute top-30 right-0 pointer-events-none">
         <Image
