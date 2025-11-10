@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export default function HeroBanner() {
   return (
-    <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
+    <section className="relative h-[60vh] md:h-[80vh] overflow-hidden md:object-cover ">
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
           src="/home/hero.png"
           alt="Hero background"
           fill
-          style={{ objectFit: "cover", objectPosition: "50% 30%" }}
+          style={{ objectPosition: "50% 30%" }}
           priority
         />
       </div>
