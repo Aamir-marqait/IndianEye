@@ -128,18 +128,18 @@ const PRODUCTS: Product[] = [
 
 export default function ProductsSection() {
   return (
-    <section className="w-full bg-black text-white py-16">
-      <div className="mx-auto px-6 w-full max-w-[1100px]">
+    <section className="w-full bg-black text-white  py-40 md:py-12 lg:py-16">
+      <div className="mx-auto px-4 md:px-6 w-full max-w-[1100px]">
         {/* Header */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 md:mb-8">
           <h2
-            className="text-12 leading-[100%] font-semibold text-white"
+            className="text-[36px] md:text-[42px] lg:text-12 leading-[1.2] md:leading-[100%] font-semibold text-white"
             style={{ fontFamily: "Albert Sans" }}
           >
             Products
           </h2>
           <p
-            className="mt-3 text-[20px] leading-[100%] font-normal text-white text-center max-w-[880px] mx-auto"
+            className="mt-2 md:mt-3 text-[15px] md:text-[18px] lg:text-[20px] leading-[140%] md:leading-[100%] font-normal text-white text-center max-w-[880px] mx-auto px-4"
             style={{ fontFamily: "Albert Sans" }}
           >
             Cutting-edge drone technology designed for surveillance, defense,
@@ -148,7 +148,7 @@ export default function ProductsSection() {
         </div>
 
         {/* Products List */}
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-14 lg:space-y-16">
           {PRODUCTS.map((p) => (
             <ProductCard key={p.id} product={p} />
           ))}
@@ -163,11 +163,11 @@ function ProductCard({ product }: { product: Product }) {
   const [activeTab, setActiveTab] = useState<"spec" | "app">("spec");
 
   return (
-    <article className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-12">
+    <article className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-start mt-8 md:mt-10 lg:mt-12">
       {/* Left: images */}
-      <div className="space-y-4">
-        <div className="rounded-2xl overflow-hidden bg-gray-900/40">
-          <div className="relative w-full h-64 sm:h-72 md:h-80 lg:h-96">
+      <div className="space-y-3 md:space-y-4">
+        <div className="rounded-xl md:rounded-2xl overflow-hidden bg-gray-900/40">
+          <div className="relative w-full h-56 sm:h-64 md:h-72 lg:h-80 xl:h-96">
             <Image
               src={product.mainImage}
               alt={product.name}
@@ -178,12 +178,12 @@ function ProductCard({ product }: { product: Product }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-3 w-full">
+        <div className="flex items-center gap-2 md:gap-3 w-full">
           {product.thumbs.map((t, i) => (
             <button
               key={i}
               onClick={() => setActiveThumb(i)}
-              className={`rounded-lg overflow-hidden flex-1 h-32 border transition-all ${
+              className={`rounded-md md:rounded-lg overflow-hidden flex-1 h-20 md:h-28 lg:h-32 border transition-all ${
                 activeThumb === i
                   ? "ring-2 ring-emerald-500"
                   : "border-transparent"
@@ -205,14 +205,14 @@ function ProductCard({ product }: { product: Product }) {
       {/* Right: content */}
       <div>
         <h3
-          className="text-[28px] leading-[100%] font-normal text-white mb-2"
+          className="text-[20px] md:text-[24px] lg:text-[28px] leading-[1.3] md:leading-[1.2] lg:leading-[100%] font-normal text-white mb-2 md:mb-3"
           style={{ fontFamily: "Albert Sans" }}
         >
           {product.name}
         </h3>
         {product.description && (
           <p
-            className="text-[16px] leading-[100%] font-normal text-white mb-4"
+            className="text-[14px] md:text-[15px] lg:text-[16px] leading-normal md:leading-[1.4] lg:leading-[100%] font-normal text-white mb-3 md:mb-4"
             style={{ fontFamily: "Albert Sans" }}
           >
             {product.description}
@@ -220,10 +220,10 @@ function ProductCard({ product }: { product: Product }) {
         )}
 
         {/* Tabs */}
-        <div className="flex items-center gap-6 border-b border-gray-700 mb-6">
+        <div className="flex items-center gap-4 md:gap-6 border-b border-gray-700 mb-4 md:mb-6">
           <button
             onClick={() => setActiveTab("spec")}
-            className={`pb-2 text-[16px] leading-[100%] font-medium transition ${
+            className={`pb-1.5 md:pb-2 text-[14px] md:text-[15px] lg:text-[16px] leading-[100%] font-medium transition ${
               activeTab === "spec"
                 ? "text-white border-b-2 border-orange-500"
                 : "text-gray-400"
@@ -234,7 +234,7 @@ function ProductCard({ product }: { product: Product }) {
           </button>
           <button
             onClick={() => setActiveTab("app")}
-            className={`pb-2 text-[16px] leading-[100%] font-medium transition ${
+            className={`pb-1.5 md:pb-2 text-[14px] md:text-[15px] lg:text-[16px] leading-[100%] font-medium transition ${
               activeTab === "app"
                 ? "text-white border-b-2 border-orange-500"
                 : "text-gray-400"
@@ -246,17 +246,17 @@ function ProductCard({ product }: { product: Product }) {
         </div>
 
         {activeTab === "spec" ? (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 md:gap-2.5">
             {product.specs.map((s, idx) => (
-              <div key={idx} className="flex items-start gap-4">
+              <div key={idx} className="flex flex-col md:flex-row md:items-start gap-1 md:gap-4">
                 <div
-                  className="w-44 text-[16px] leading-[100%] font-normal text-[#DADADA]"
+                  className="md:w-44 text-[13px] md:text-[14px] lg:text-[16px] leading-[1.3] md:leading-[100%] font-normal text-[#DADADA]"
                   style={{ fontFamily: "Albert Sans" }}
                 >
                   {s.label}
                 </div>
                 <div
-                  className="flex-1 text-[16px] leading-[100%] font-medium text-white"
+                  className="flex-1 text-[13px] md:text-[14px] lg:text-[16px] leading-[1.3] md:leading-[100%] font-medium text-white"
                   style={{ fontFamily: "Albert Sans" }}
                 >
                   {s.value}
@@ -265,24 +265,25 @@ function ProductCard({ product }: { product: Product }) {
             ))}
           </div>
         ) : (
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             {typeof product.application === "string" ? (
               <div className="text-sm text-gray-300">{product.application}</div>
             ) : (
               product.application?.map((app, idx) => (
-                <div key={idx} className="space-y-4">
+                <div key={idx} className="space-y-3 md:space-y-4">
                   {/* Icon and Title */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full border border-[#555555] flex items-center justify-center shrink-0">
+                  <div className="flex items-center gap-2 md:gap-3">
+                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-[#555555] flex items-center justify-center shrink-0">
                       <Image
                         src={app.icon}
                         alt={app.title}
-                        width={24}
-                        height={24}
+                        width={20}
+                        height={20}
+                        className="md:w-[24px] md:h-[24px]"
                       />
                     </div>
                     <h4
-                      className="text-[20px] leading-[100%] font-normal text-white text-center"
+                      className="text-[16px] md:text-[18px] lg:text-[20px] leading-[1.2] md:leading-[100%] font-normal text-white"
                       style={{ fontFamily: "Albert Sans" }}
                     >
                       {app.title}
@@ -292,7 +293,7 @@ function ProductCard({ product }: { product: Product }) {
                   {/* Description */}
                   {app.description && (
                     <p
-                      className="text-[16px] leading-6 font-normal text-white"
+                      className="text-[14px] md:text-[15px] lg:text-[16px] leading-normal md:leading-6 font-normal text-white"
                       style={{ fontFamily: "Albert Sans" }}
                     >
                       {app.description}
@@ -300,18 +301,18 @@ function ProductCard({ product }: { product: Product }) {
                   )}
 
                   {/* Items Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 md:gap-x-6 lg:gap-x-8 gap-y-2 md:gap-y-3">
                     {app.items.map((item, i) => (
                       <div
                         key={i}
-                        className={`flex items-center gap-2 ${
+                        className={`flex items-start gap-2 ${
                           i === app.items.length - 1 && app.items.length % 3 !== 0
                             ? 'md:col-span-2 lg:col-span-3'
                             : ''
                         }`}
                       >
                         <svg
-                          className="w-3.5 h-3.5 text-[#EA580C] shrink-0"
+                          className="w-3 h-3 md:w-3.5 md:h-3.5 text-[#EA580C] shrink-0 mt-0.5"
                           viewBox="0 0 16 16"
                           fill="currentColor"
                         >
@@ -322,7 +323,7 @@ function ProductCard({ product }: { product: Product }) {
                           />
                         </svg>
                         <span
-                          className="text-[16px] leading-[100%] font-normal text-white whitespace-nowrap"
+                          className="text-[13px] md:text-[14px] lg:text-[16px] leading-[1.4] md:leading-[100%] font-normal text-white"
                           style={{ fontFamily: "Albert Sans" }}
                         >
                           {item}

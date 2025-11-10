@@ -12,16 +12,16 @@ export default function CoreService() {
           className="object-cover"
         />
       </div>
-      <div className="max-w-[1100px] mx-auto relative z-10 flex flex-col md:flex-row gap-6 items-start py-10 md:py-20 px-6">
+      <div className="max-w-[1100px] mx-auto relative z-10 flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-6 items-start py-8 md:py-12 lg:py-20 px-4 md:px-6">
         {/* Left text column */}
         <div className="w-full md:w-1/2">
-          <h1 className="text-3xl md:text-[40px] font-bold leading-tight md:leading-none tracking-normal text-white mb-4 md:mb-6 max-w-2xl">
+          <h1 className="text-[26px] md:text-[32px] lg:text-[40px] font-bold leading-[1.3] md:leading-tight lg:leading-none tracking-normal text-white mb-3 md:mb-4 lg:mb-6 max-w-2xl">
             <span className="text-[#EA580C]">Integrity</span> and <span className="text-[#259351]">Vigilance</span> at the core of
             your service
           </h1>
 
-          <div className="max-w-none">
-            <p className="text-sm md:text-base font-normal leading-6 md:leading-7 tracking-normal text-white mb-3">
+          <div className="max-w-none space-y-3 md:space-y-4">
+            <p className="text-[14px] md:text-[15px] lg:text-base font-normal leading-[1.6] md:leading-6 lg:leading-7 tracking-normal text-white/90">
               Indianeye Security Pvt. Ltd. (ISL) is an ISO 9001:2015 & ISO/IEC
               27001:2022 certified company. It was setup with the objective of
               assisting the government, companies and individuals to tackle the
@@ -31,7 +31,7 @@ export default function CoreService() {
               more viable.
             </p>
 
-            <p className="text-sm md:text-base font-normal leading-6 md:leading-7 tracking-normal text-white mb-3">
+            <p className="text-[14px] md:text-[15px] lg:text-base font-normal leading-[1.6] md:leading-6 lg:leading-7 tracking-normal text-white/90">
               Our collaboration with leading global players brings together over
               03 decades of in-depth and vast experiences in the field of
               security across a wide spectrum of activities. Our solutions for
@@ -40,7 +40,7 @@ export default function CoreService() {
               different mobile platform based applications.
             </p>
 
-            <p className="text-sm md:text-base font-normal leading-6 md:leading-7 tracking-normal text-white mb-3">
+            <p className="text-[14px] md:text-[15px] lg:text-base font-normal leading-[1.6] md:leading-6 lg:leading-7 tracking-normal text-white/90">
               The company also delivers comprehensive solutions for reducing
               crime in cities combining advanced technology with specialist
               training of security forces, which is internationally certified
@@ -51,8 +51,8 @@ export default function CoreService() {
         </div>
 
         {/* Right image stack column */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div className="w-full relative h-[400px] md:h-[600px]">
+        <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-4 md:mt-0">
+          <div className="w-full relative h-[300px] sm:h-[360px] md:h-[480px] lg:h-[600px]">
             <Image
               src="/about/service.png"
               alt="Service"

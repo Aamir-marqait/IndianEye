@@ -80,28 +80,28 @@ export default function AchievementsCarousel() {
   }
 
   return (
-    <section className="w-full bg-[#171717] text-white py-5 relative overflow-hidden">
+    <section className="w-full bg-[#171717] text-white py-8 md:py-5 relative overflow-hidden">
       {/* Decorative element in right corner */}
-      <div className="absolute top-0 right-0 pointer-events-none">
+      <div className="absolute top-30 right-0 pointer-events-none">
         <Image
           src="/tsd/element2.png"
           alt=""
-          width={300}
-          height={300}
-          className="opacity-50"
+          width={200}
+          height={200}
+          className="opacity-50 md:w-[300px] md:h-[300px]"
         />
       </div>
 
-      <div className="mx-auto px-12 w-full max-w-screen relative z-10">
-        <div className="text-center mb-8">
+      <div className="mx-auto px-4 md:px-12 w-full max-w-screen relative z-10">
+        <div className="text-center mb-6 md:mb-8">
           <h2
-            className="text-[48px] leading-[70px] font-semibold text-white text-center capitalize"
+            className="text-[28px] md:text-[48px] leading-[1.3] md:leading-[70px] font-semibold text-white text-center capitalize px-4"
             style={{ fontFamily: "Albert Sans" }}
           >
             Our Achievements
           </h2>
           <p
-            className="mt-3 text-[16px] leading-[23px] font-normal text-white text-center max-w-[820px] mx-auto"
+            className="mt-2 md:mt-3 text-[14px] md:text-[16px] leading-[150%] md:leading-[23px] font-normal text-white text-center max-w-[820px] mx-auto px-4"
             style={{ fontFamily: "Albert Sans" }}
           >
             Comprehensive solutions blending advanced technology with decades of
@@ -160,11 +160,11 @@ export default function AchievementsCarousel() {
             style={{ WebkitOverflowScrolling: "touch" }}
           >
             <div
-              className="flex gap-6 items-stretch py-6"
+              className="flex gap-4 md:gap-6 items-stretch py-4 md:py-6"
               style={{
                 // ensure horizontal centering on large screens by adding padding equal to container side space
-                paddingLeft: "28px",
-                paddingRight: "28px",
+                paddingLeft: "16px",
+                paddingRight: "16px",
               }}
             >
               {ACHIEVEMENTS.map((a, i) => {
@@ -183,7 +183,7 @@ export default function AchievementsCarousel() {
                         setActive(i);
                       }
                     }}
-                    className={`shrink-0 w-[444px] h-[149px] snap-center rounded-2xl transition-all duration-400 outline-none pt-10 pr-8 pb-10 pl-8 flex items-center gap-2
+                    className={`shrink-0 w-[320px] md:w-[380px] lg:w-[444px] min-h-[130px] md:h-[149px] snap-center rounded-xl md:rounded-2xl transition-all duration-400 outline-none p-6 md:pt-10 md:pr-8 md:pb-10 md:pl-8 flex items-center gap-2
                       ${i === active ? "scale-100" : "scale-95 opacity-70"}
                     `}
                     style={{
@@ -193,7 +193,7 @@ export default function AchievementsCarousel() {
                     }}
                   >
                     <p
-                      className={`text-[16px] leading-[100%] font-normal ${
+                      className={`text-[14px] md:text-[16px] leading-[140%] md:leading-[100%] font-normal ${
                         i === active ? "text-white" : "text-gray-300"
                       }`}
                       style={{ fontFamily: "Poppins" }}
@@ -207,13 +207,13 @@ export default function AchievementsCarousel() {
           </div>
 
           {/* Pagination dots */}
-          <div className="hidden  mt-6 md:flex items-center justify-center gap-3">
+          <div className="flex mt-4 md:mt-6 items-center justify-center gap-2 md:gap-3">
             {ACHIEVEMENTS.map((_, i) => (
               <button
                 key={i}
                 aria-label={`Go to slide ${i + 1}`}
                 onClick={() => setActive(i)}
-                className={`w-3 h-3 rounded-full transition-colors ${
+                className={`w-2 h-2 md:w-3 md:h-3 rounded-full transition-colors ${
                   i === active ? "bg-orange-500" : "bg-gray-500/60"
                 }`}
               />
