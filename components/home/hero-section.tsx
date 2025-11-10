@@ -9,9 +9,19 @@ export default function HeroBanner() {
           src="/home/hero.png"
           alt="Hero background"
           fill
-          style={{ objectPosition: "50% 30%" }}
+          className="object-cover"
           priority
         />
+        <div className="absolute inset-0 flex items-end justify-center">
+          <Image
+            src="/home/bg2.png"
+            alt="Hero overlay"
+            width={1120}
+            height={180}
+            className="w-full h-auto lg:w-[90%] lg:h-[75%] object-contain"
+            priority
+          />
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-12 md:py-20 relative">
