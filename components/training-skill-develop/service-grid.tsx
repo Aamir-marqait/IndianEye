@@ -16,31 +16,31 @@ const SERVICES = [
 export default function ServicesGrid() {
   return (
     <section className="w-full relative overflow-hidden bg-black">
-      <div className="mx-auto px-6 w-full max-w-[1100px]">
-        <div className="pt-12 text-center">
-          <h2 className="font-['Albert_Sans'] font-semibold text-[48px] leading-[70px] tracking-[0%] text-center capitalize text-white">
+      <div className="mx-auto px-4 md:px-6 w-full max-w-[1100px]">
+        <div className="pt-8 md:pt-12 text-center">
+          <h2 className="font-['Albert_Sans'] font-semibold text-[28px] md:text-[48px] leading-[1.3] md:leading-[70px] tracking-[0%] text-center capitalize text-white px-4">
             Our Services
           </h2>
-          <p className="mt-3 font-['Albert_Sans'] font-normal text-base leading-[23px] tracking-[0%] text-center text-white max-w-2xl mx-auto">
+          <p className="mt-2 md:mt-3 font-['Albert_Sans'] font-normal text-[14px] md:text-base leading-[150%] md:leading-[23px] tracking-[0%] text-center text-white max-w-2xl mx-auto px-4">
             Comprehensive solutions blending advanced technology with decades of
             security expertise.
           </p>
         </div>
 
         {/* Services Grid - Cards centered with flex-wrap */}
-        <div className="mt-10 flex flex-wrap justify-center gap-8">
+        <div className="mt-6 md:mt-10 flex flex-wrap justify-center gap-5 md:gap-8">
           {SERVICES.map((s) => (
             <div
               key={s.title + "-g"}
-              className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px] group rounded-2xl overflow-hidden transition transform duration-300 hover:-translate-y-1"
+              className="w-full sm:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-1.5rem)] max-w-[360px] group rounded-2xl overflow-hidden transition transform duration-300 hover:-translate-y-1"
             >
               <div
-                className="rounded-2xl p-3 transition-colors duration-300 "
+                className="rounded-2xl p-2 md:p-3 transition-colors duration-300 "
                 style={{
                   background: 'linear-gradient(96.79deg, #171717 -62.94%, #323335 -62.92%, rgba(90, 90, 90, 0) 54.42%, #171717 174.24%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))'
                 }}
               >
-                <div className="relative rounded-xl overflow-hidden h-[360px] md:h-[380px]">
+                <div className="relative rounded-xl overflow-hidden h-[300px] md:h-[360px] lg:h-[380px]">
                   <Image
                     src={s.image}
                     alt={s.title}
@@ -53,8 +53,8 @@ export default function ServicesGrid() {
                   <div className="absolute inset-x-0 bottom-0 h-32 bg-linear-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
 
                   {/* title container */}
-                  <div className="absolute left-0 right-0 bottom-6 px-6 text-center">
-                    <h3 className="text-lg md:text-xl font-semibold transition-colors duration-300 text-white">
+                  <div className="absolute left-0 right-0 bottom-4 md:bottom-6 px-4 md:px-6 text-center">
+                    <h3 className="text-base md:text-lg lg:text-xl font-semibold transition-colors duration-300 text-white">
                       {s.title}
                     </h3>
                   </div>
@@ -71,7 +71,7 @@ export default function ServicesGrid() {
       </div>
 
       {/* final spacing */}
-      <div className="pb-16" />
+      <div className="pb-10 md:pb-16" />
     </section>
   );
 }

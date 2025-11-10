@@ -67,7 +67,7 @@ export default function OurAcademy({
   }
 
   return (
-    <section className="w-full relative overflow-hidden bg-[#171717] py-16">
+    <section className="w-full relative overflow-hidden bg-[#171717] py-10 md:py-16">
       {/* Background image you own - left empty by default */}
       <div
         aria-hidden
@@ -91,17 +91,17 @@ export default function OurAcademy({
         }}
       />
 
-      <div className="mx-auto px-6 w-full max-w-[1100px]">
+      <div className="mx-auto px-4 md:px-6 w-full max-w-[1100px]">
         {/* Heading */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 md:mb-8">
           <h2
-            className="text-[48px] leading-[70px] font-semibold text-white capitalize"
+            className="text-[28px] md:text-[48px] leading-[1.3] md:leading-[70px] font-semibold text-white capitalize px-4"
             style={{ fontFamily: "Albert Sans" }}
           >
             Our Academy
           </h2>
           <p
-            className="mt-3 text-[20px] leading-6 font-normal text-white max-w-[850px] mx-auto"
+            className="mt-2 md:mt-3 text-[14px] md:text-[20px] leading-[150%] md:leading-6 font-normal text-white max-w-[850px] mx-auto px-4"
             style={{ fontFamily: "Albert Sans" }}
           >
             Where quality training meets real-world opportunities.
@@ -109,9 +109,9 @@ export default function OurAcademy({
         </div>
 
         {/* Main layout: left accordion, right image */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
           {/* Left: Accordion */}
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {accordion.map((item, i) => {
               const isOpen = openIndex === i;
               return (
@@ -119,12 +119,12 @@ export default function OurAcademy({
                   <button
                     onClick={() => toggleAccordion(i)}
                     aria-expanded={isOpen}
-                    className="w-full flex items-center justify-between py-4 px-4 rounded-md hover:bg-white/3 transition"
+                    className="w-full flex items-center justify-between py-3 md:py-4 px-3 md:px-4 rounded-md hover:bg-white/3 transition"
                   >
-                    <div>
+                    <div className="flex-1">
                       <div
-                        className={`text-[24px] leading-[100%] font-medium align-middle ${
-                          isOpen ? "text-[#EA580C] text-left" : "text-white"
+                        className={`text-[18px] md:text-[24px] leading-[110%] md:leading-[100%] text-left font-medium align-middle ${
+                          isOpen ? "text-[#EA580C] " : "text-white"
                         }`}
                         style={{ fontFamily: "Albert Sans" }}
                       >
@@ -132,7 +132,7 @@ export default function OurAcademy({
                       </div>
                       {isOpen && (
                         <div
-                          className="mt-2 text-[16px] leading-6 font-normal text-white max-w-xl text-left"
+                          className="mt-2 text-[14px] md:text-[16px] leading-[150%] md:leading-6 font-normal text-white max-w-xl text-left"
                           style={{ fontFamily: "Albert Sans" }}
                         >
                           {item.content}
@@ -141,7 +141,7 @@ export default function OurAcademy({
                     </div>
 
                     <svg
-                      className={`w-5 h-5 text-gray-300 transform transition-transform duration-200 ${
+                      className={`w-4 h-4 md:w-5 md:h-5 text-gray-300 transform transition-transform duration-200 shrink-0 ml-2 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                       fill="none"
@@ -161,7 +161,7 @@ export default function OurAcademy({
 
                   {/* collapsed content (for items that are not the active one show preview text only) */}
                   {!isOpen && (
-                    <div className="px-4 mt-2 text-sm text-gray-400 max-w-prose">
+                    <div className="px-3 md:px-4 mt-2 text-xs md:text-sm text-gray-400 max-w-prose">
                       {/* show short preview of content */}
                       {item.content.length > 120
                         ? item.content.slice(0, 120) + "…"
@@ -175,7 +175,7 @@ export default function OurAcademy({
 
           {/* Right: Image / carousel */}
           <div className="flex flex-col justify-center md:justify-end">
-            <div className="w-full h-[362px] rounded-[12px] overflow-hidden opacity-100 relative">
+            <div className="w-full h-[260px] md:h-[320px] lg:h-[362px] rounded-[12px] overflow-hidden opacity-100 relative">
               <Image
                 src={currentImages[current]}
                 alt={`Academy photo ${current + 1}`}
@@ -186,20 +186,20 @@ export default function OurAcademy({
             </div>
 
             {/* carousel controls - below image, right aligned */}
-            <div className="flex gap-3 items-center justify-end mt-4">
+            <div className="flex gap-2 md:gap-3 items-center justify-end mt-3 md:mt-4">
               <button
                 onClick={prevPhoto}
                 aria-label="Previous"
-                className="w-[37.75px] h-[37.75px] rounded-[100px] bg-transparent border border-[#555555] flex items-center justify-center hover:border-[#FFFFFF33] transition"
+                className="w-[34px] h-[34px] md:w-[37.75px] md:h-[37.75px] rounded-[100px] bg-transparent border border-[#555555] flex items-center justify-center hover:border-[#FFFFFF33] transition"
               >
-                <span className="text-white text-xl">←</span>
+                <span className="text-white text-lg md:text-xl">←</span>
               </button>
               <button
                 onClick={nextPhoto}
                 aria-label="Next"
-                className="w-[37.75px] h-[37.75px] bg-accent rounded-[100px] border border-[#FFFFFF33] flex items-center justify-center hover:border-[#555555] transition"
+                className="w-[34px] h-[34px] md:w-[37.75px] md:h-[37.75px] bg-accent rounded-[100px] border border-[#FFFFFF33] flex items-center justify-center hover:border-[#555555] transition"
               >
-                <span className="text-[#D3363B] text-xl">→</span>
+                <span className="text-[#D3363B] text-lg md:text-xl">→</span>
               </button>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function OurAcademy({
       </div>
 
       {/* bottom spacing */}
-      <div className="pb-12" />
+      <div className="pb-8 md:pb-12" />
     </section>
   );
 }
