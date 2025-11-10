@@ -35,9 +35,9 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section className="w-full bg-black py-16 relative">
+    <section className="w-full bg-black py-10 md:py-16 relative">
       {/* Top Left Image */}
-      <div className="absolute top-0 -left-7 w-32 h-32 md:w-120 md:h-120  pointer-events-none">
+      <div className="absolute top-0 -left-7 w-20 h-20 md:w-120 md:h-120  pointer-events-none">
         <Image
           src="/home/left.png"
           alt="Decorative element"
@@ -47,7 +47,7 @@ export default function ServicesSection() {
       </div>
 
       {/* Bottom Right Image */}
-      <div className="absolute bottom-0 right-0 w-32 h-32 md:w-120 md:h-120  pointer-events-none">
+      <div className="absolute bottom-0 right-0 w-20 h-20 md:w-120 md:h-120  pointer-events-none">
         <Image
           src="/home/right.png"
           alt="Decorative element"
@@ -56,26 +56,26 @@ export default function ServicesSection() {
         />
       </div>
 
-      <div className="mx-auto px-6 w-full max-w-[1100px] relative z-10">
+      <div className="mx-auto px-4 md:px-6 w-full max-w-[1100px] relative z-10">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <p
-            className="text-[20px] font-semibold text-center leading-6 font-albert-sans"
+            className="text-[16px] md:text-[20px] font-semibold text-center leading-6 font-albert-sans"
             style={{ color: "#EA580C" }}
           >
             OUR SERVICES
           </p>
-          <h2 className="mt-4 text-[48px] text-white font-semibold text-center leading-[100%] capitalize font-albert-sans">
+          <h2 className="mt-3 md:mt-4 text-[28px] md:text-[48px] text-white font-semibold text-center leading-[110%] md:leading-[100%] capitalize font-albert-sans">
             Products & <span className="text-white">Services</span>
           </h2>
-          <p className="mt-5 text-[16px] font-normal text-center text-white/80 leading-[100%] max-w-[820px] mx-auto font-albert-sans">
+          <p className="mt-3 md:mt-5 text-[14px] md:text-[16px] font-normal text-center text-white/80 leading-[140%] md:leading-[100%] max-w-[820px] mx-auto font-albert-sans px-4">
             Comprehensive solutions blending advanced technology with decades of
             security expertise.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
           {services.map((s) => (
             <article
               key={s.title}
@@ -87,7 +87,7 @@ export default function ServicesSection() {
               }}
             >
               {/* Image */}
-              <div className="relative w-full h-44 md:h-48 lg:h-52 overflow-hidden">
+              <div className="relative w-full h-40 md:h-48 lg:h-52 overflow-hidden">
                 <Image
                   src={s.image}
                   alt={s.title}
@@ -99,17 +99,17 @@ export default function ServicesSection() {
               </div>
 
               {/* Content */}
-              <div className="p-6">
-                <h3 className="text-[20px] font-bold text-white mb-3 leading-[23px] font-albert-sans">
+              <div className="p-5 md:p-6">
+                <h3 className="text-[18px] md:text-[20px] font-bold text-white mb-2 md:mb-3 leading-[23px] font-albert-sans">
                   {s.title}
                 </h3>
-                <p className="text-[16px] font-normal text-white mb-6 leading-[150%] font-albert-sans">
+                <p className="text-[14px] md:text-[16px] font-normal text-white mb-4 md:mb-6 leading-[150%] font-albert-sans">
                   {s.description}
                 </p>
 
                 <Link
                   href={s.href || "#"}
-                  className="inline-flex items-center font-medium text-[16px] leading-[23px] underline font-poppins"
+                  className="inline-flex items-center font-medium text-[14px] md:text-[16px] leading-[23px] underline font-poppins"
                   style={{ color: "#EA580C" }}
                 >
                   Learn More

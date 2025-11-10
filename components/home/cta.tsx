@@ -9,25 +9,25 @@ export default function CTA() {
         }}
       />
 
-      <div className="mx-auto px-6 w-full max-w-[1100px]">
-        <div className="py-12 md:py-15  flex flex-col items-center text-center">
-          <p className="font-albert-sans text-[20px] font-semibold leading-6 tracking-normal text-[#EA580C] mb-4">
+      <div className="mx-auto px-4 md:px-6 w-full max-w-[1100px]">
+        <div className="py-10 md:py-15 flex flex-col items-center text-center">
+          <p className="font-albert-sans text-[16px] md:text-[20px] font-semibold leading-6 tracking-normal text-[#EA580C] mb-3 md:mb-4">
             Let&apos;s Connect Today
           </p>
 
-          <h2 className="font-albert-sans text-[58px] font-semibold leading-[72px] tracking-[-0.0116em] text-center text-white max-w-3xl">
+          <h2 className="font-albert-sans text-[32px] md:text-[58px] font-semibold leading-[1.3] md:leading-[72px] tracking-[-0.0116em] text-center text-white max-w-3xl px-4">
             Interested in
             <br />
             Working with Us?
           </h2>
 
-          <p className="mt-4 font-albert-sans text-[20px] font-normal leading-8 tracking-[-0.02em] text-center text-[#D0D0D0] max-w-2xl">
+          <p className="mt-3 md:mt-4 font-albert-sans text-[14px] md:text-[20px] font-normal leading-[1.6] md:leading-8 tracking-[-0.02em] text-center text-[#D0D0D0] max-w-2xl px-4">
             Discover why organizations rely on Indianeye Security to protect
             what matters most.
           </p>
 
-          <div className="mt-6">
-            <button className="cursor-pointer inline-flex items-center gap-3 bg-[#EA580C] hover:bg-orange-600 text-white font-albert-sans text-[19px] font-normal leading-none tracking-normal px-8 py-4 rounded-[60px] shadow-md transition">
+          <div className="mt-5 md:mt-6">
+            <button className="cursor-pointer inline-flex items-center gap-2 md:gap-3 bg-[#EA580C] hover:bg-orange-600 text-white font-albert-sans text-[16px] md:text-[19px] font-normal leading-none tracking-normal px-6 md:px-8 py-3 md:py-4 rounded-[60px] shadow-md transition">
               Learn More
               <svg
                 className="w-4 h-4"
