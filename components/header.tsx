@@ -64,7 +64,7 @@ const Header = () => {
               <div className="absolute top-full pt-2 left-0 z-50">
                 <div className="bg-black border border-gray-800 rounded-md shadow-lg py-2 min-w-[220px]">
                   <Link
-                    href="/drone"
+                    href="/drones"
                     className="block px-4 py-2.5 text-white text-[17px] font-albert-sans hover:bg-gray-900 transition-colors"
                   >
                     Drone

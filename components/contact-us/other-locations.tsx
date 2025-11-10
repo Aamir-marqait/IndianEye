@@ -62,7 +62,7 @@ const OtherLocations = () => {
       }}
     >
       <div className="w-full max-w-[1300px] px-4 md:px-6 lg:px-8 py-3 md:py-5 mx-auto">
-        <h2 className="font-(family-name:--font-albert-sans) font-bold text-[28px] md:text-[38px] lg:text-[48px] leading-[1.2] md:leading-[1.1] lg:leading-[100%] text-center text-white mb-3 md:mb-4">
+        <h2 className="font-albert-sans font-bold text-[28px] md:text-[38px] lg:text-[48px] leading-[1.2] md:leading-[1.1] lg:leading-[100%] text-center text-white mb-3 md:mb-4">
           Other Locations
         </h2>
         {/* Underline */}
